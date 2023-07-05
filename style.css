@@ -310,16 +310,13 @@ input:nth-of-type(5):checked~main#carousel {
 } */
 
 .img-contnt {
+  position: relative;
   height: 160px;
   width: 160px;
   border-radius: 6px;
   overflow: hidden;
-}
-
-.img-contnt img {
-  width: 160px;
-  height: 160px;
-  object-fit: contain;
+  background-size: contain;
+  
 }
 
 .overlay{
@@ -332,9 +329,30 @@ input:nth-of-type(5):checked~main#carousel {
 opacity: 1;
 }
 .overlay #play-hover{
-  color: red;
-
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  color: rgb(255, 0, 0);
+  font-size: 2.5rem;
 }
+.overlay #share-hover{
+  position: absolute;
+  color: #fff;
+  top: 80%;
+  left: 10%;
+  font-size: 2rem;
+}
+
+  .overlay #more-hover{
+    position: absolute;
+  color: #fff;
+  top:80%;
+  left: 80%;
+  font-size: 2rem;
+
+
+  }
 
 .song-name {
   color: #fff;
