@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Musically</title>
+  <link rel="icon" type="image/x-icon" href="Assets/img/logo.jpg">
+  <meta name="description" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <!-- Header part start from here -->
+  <header>
+    <!-- Nav menu section start from here -->
+    <nav id="nav1">
+      <div id="left-nav">
+        <img class="header-logo" height="80px" width="100px" src="./Assets/img/logo.jpg" alt="" />
+        <h2 class="title">Musically</h2>
+      </div>
+      <div id="right-nav">
+        <div id="search-bar">
+          <img class="search-icon" width="16" height="16" src="https://img.icons8.com/search" alt="search--v1" />
+          <input class="search-input" placeholder="Search Artists, Songs, Albums" type="search" name="" id="" />
+        </div>
+      </div>
+    </nav>
+
+    <nav id="nav2">
+      <ul class="nav-menu">
+        <li><a class="active" href="#all">All </a></li>
+        <li><a href="#trending-songs">Trending Songs</a></li>
+        <li><a href="#new-songs">New Songs</a></li>
+        <li><a href="#old-songs">Old Songs</a></li>
+        <li><a href="#moods-genres">Moods Genres</a></li>
+        <li><a href="#album">Album</a></li>
+        <li><a href="#radio">Radio</a></li>
+        <li><a href="#podcast">Podcast</a></li>
+        <li><a href="#my-music">My Music</a></li>
+      </ul>
+    </nav>
+    <!-- Nav menu section end here -->
+   
+  </header>
+  <!-- Header part end here -->
+
+  <div id="wrapper">
+    <main>
+      <section id="content-section">
+        <!-- Carousel start from here -->
+        <div id="arrow">
+          <div id="left-arrow">
+            <i class="fa fa-angle-left fa-5x" aria-hidden="true"></i>
+          </div>
+          <div id="right-arrow">
+            <i class="fa fa-angle-right fa-5x" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div id="slider">
+          <input type="radio" name="position" />
+          <input type="radio" name="position" />
+          <input type="radio" name="position" checked />
+          <input type="radio" name="position" />
+          <input type="radio" name="position" />
+
+          <main id="carousel">
+            <div class="item"><img src="Assets/img/1.jpg" /></div>
+            <div class="item"><img src="Assets/img/4.jpg" /></div>
+            <div class="item"><img src="Assets/img/2.jpg" /></div>
+            <div class="item"><img src="Assets/img/3.jpg" /></div>
+            <div class="item"><img src="Assets/img/5.jpg" /></div>
+          </main>
+        </div>
+        <!-- Carousel end here -->
+        
+        <!-- Cards section start from here -->
+        <section class="songs-sections">
+         <div class="section-heading">
+          <h2>Trending Songs</h2>
+        <h4 class="show-all"><a href="#">Show All</a></h4>
+         </div>
+          <div class="songs-contnt">
+            <div class="song-card">
+              <div class="img-contnt">
+                <img src="Assets/img/16.jpg" alt="image not loaded" />
+                <div class="overlay"></div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu</p>
+            </div>
+
+            <div class="song-card">
+              <div class="img-contnt">
+                <img src="Assets/img/16.jpg" alt="image not loaded" />
+                <div class="overlay"></div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu</p>
+            </div>
+
+            <div class="song-card">
+              <div class="img-contnt">
+                <img src="Assets/img/16.jpg" alt="image not loaded" />
+                <div class="overlay"></div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu</p>
+            </div>
+
+            <div class="song-card">
+              <div class="img-contnt">
+                <img src="Assets/img/16.jpg" alt="image not loaded" />
+                <div class="overlay"></div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu</p>
+            </div>
+
+            <div class="song-card">
+              <div class="img-contnt">
+                <img src="Assets/img/16.jpg" alt="image not loaded" />
+                <div class="overlay"></div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu</p>
+            </div>
+
+            <div class="song-card">
+              <div class="img-contnt">
+                <img src="Assets/img/16.jpg" alt="image not loaded" />
+                <div class="overlay"></div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu</p>
+            </div>
+
+          </div>
+        </section>
+        <!-- Cards section end here -->
+      </section>
+
+      <!-- Side Queue code start from here -->
+      <aside id="side-queue">
+        <div class="playlist-heading">
+          <h1>Playlist</h1>
+        </div>
+        <!-- Playlist code start -->
+        <div class="play-list">
+          <h4 class="active">
+            <span><i class="fa fa-music" aria-hidden="true"></i>playlist</span>
+          </h4>
+
+          <h4>
+            <span><i class="fa fa-music" aria-hidden="true"> </i>Recent
+              Played</span>
+          </h4>
+
+          <h4>
+            <span><i class="fa fa-music" aria-hidden="true"> </i>Recommended</span>
+          </h4>
+        </div>
+        <!-- Playlist code end -->
+
+         <!-- Side Queue Songs list section start -->
+        <div class="song-list">
+
+          <li class="songItem">
+            <span>01</span>
+            <img src="Assets/img/1.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>02</span>
+            <img src="Assets/img/2.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>03</span>
+            <img src="Assets/img/3.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>04</span>
+            <img src="Assets/img/4.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>01</span>
+            <img src="Assets/img/1.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>01</span>
+            <img src="Assets/img/1.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>01</span>
+            <img src="Assets/img/1.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>01</span>
+            <img src="Assets/img/1.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>01</span>
+            <img src="Assets/img/1.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>01</span>
+            <img src="Assets/img/1.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>01</span>
+            <img src="Assets/img/1.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>01</span>
+            <img src="Assets/img/1.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>01</span>
+            <img src="Assets/img/1.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span>01</span>
+            <img src="Assets/img/1.jpg" alt="">
+            <h5>On My Way <br>
+              <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa playListPlay fa-play-circle" aria-hidden="true" id="1"></i>
+          </li>
+        </div>
+        <!-- Side Queue Songs list section end -->
+      </aside>
+
+
+        <!-- <div class="master_play">
+          <div class="wave">
+            <div class="wave1"></div>
+            <div class="wave2"></div>
+            <div class="wave3"></div>
+          </div>
+        </div> -->
+      
+    </main>
+  </div>
+</body>
+
+</html>
