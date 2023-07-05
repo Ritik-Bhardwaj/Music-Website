@@ -16,7 +16,7 @@ body {
 
 #content-section {
   width: 75%;
-  height: 90vh;
+  height: auto;
   display: inline-block;
   background: #121214;
   border: 2px solid rgb(3, 173, 0);
@@ -40,6 +40,8 @@ body {
   background: #e34;
   width: 30vw;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 #left-nav .title{
   margin: 0px;
@@ -302,10 +304,10 @@ input:nth-of-type(5):checked~main#carousel {
   margin-right: 45px;
 }
 
-.song-card img:hover {
+/* .song-card img:hover {
     transition: all 0.5s ease-in-out;
     opacity: 0.6;
-}
+} */
 
 .img-contnt {
   height: 160px;
@@ -318,6 +320,20 @@ input:nth-of-type(5):checked~main#carousel {
   width: 160px;
   height: 160px;
   object-fit: contain;
+}
+
+.overlay{
+  background-image: linear-gradient(0deg,#0b0d0f,rgba(11,13,15,.35));
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+.overlay:hover{
+opacity: 1;
+}
+.overlay #play-hover{
+  color: red;
+
 }
 
 .song-name {
