@@ -13,13 +13,21 @@ body {
   font-weight: 800;
 }
 
+#wrapper{
+  background-color: #000;
+  padding: 10px;
+}
+
+:root{
+  --text-color:#e51d53;
+}
 
 #content-section {
-  width: 75%;
+  width: 74%;
   height: auto;
   display: inline-block;
-  background: #121214;
-  border: 2px solid rgb(3, 173, 0);
+  box-shadow: 4px 0px 13px 9px #132450;
+background-color: #0b142d;
 }
 
 
@@ -27,35 +35,51 @@ body {
 #nav1,
 #nav2 {
   display: flex;
+  background-color: #222;
 }
 
 #nav1 {
   height: 5rem;
+  position: relative;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  background: #717070;
+  background-color:#000;
+  justify-content: flex-start;
 }
 
 #left-nav {
-  background: #e34;
-  width: 30vw;
+  width: 30%;
   height: 100%;
   display: flex;
   justify-content: center;
 }
-#left-nav .title{
-  margin: 0px;
-  display: inline-block;
-  font-size: 48px;
-  font-weight: 400;
-  color: #fff;
+
+.title h1 {
+  margin: 0;
+  color: var(--text-color);
+  font-family: 'Teko', sans-serif;
+  font-size: 3rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  animation: glow 1.4s ease-in-out infinite alternate;
+  text-align: center;
 }
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px var(--text-color);
+  }
+  to {
+    text-shadow: 0 0 35px #d72051, 0 0 10px var(--text-color);
+  }
+}
+
 
 #right-nav {
   display: flex;
-  justify-content: center;
-  background: rgb(0, 0, 0);
-  width: 60vw;
+  justify-content: flex-start;
+  padding-left: 100px;
+  width: 70%;
   height: 100%;
   padding-top: 20px;
 }
@@ -74,7 +98,7 @@ body {
 input.search-input {
   width: 85%;
   height: 40px;
-  background-color: #ffffff;
+  background-color: #444;
   border-radius: 20px;
   border: none;
   outline: none;
@@ -95,20 +119,23 @@ li {
 
 li a {
   display: block;
-  color: rgb(154, 71, 71);
+  color: var(--text-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  margin: 4px;
+}
+#nav2 .active{
+  background-color: #000;
 }
 
 li a:hover {
   background-color: #111;
+  text-underline-offset: 20px;
+  border-bottom: 2px solid var(--text-color);
 }
 
-.active {
-  background-color: #111;
-}
-
+ 
 /*  Carousel CSS start from here */
 /* Slider CSS */
 #slider {
@@ -263,8 +290,6 @@ input:nth-of-type(5):checked~main#carousel {
   height: 60vh;
   width: 35vw;
 }
-
-
  
  /* Songs cards slider CSS Start from here */
 .songs-section {
@@ -289,6 +314,7 @@ input:nth-of-type(5):checked~main#carousel {
   text-decoration: none;
 }
 .show-all a:hover {
+  color: var(--text-color);
   text-decoration: underline;
 }
 
@@ -304,10 +330,10 @@ input:nth-of-type(5):checked~main#carousel {
   margin-right: 45px;
 }
 
-/* .song-card img:hover {
+.song-card img:hover {
     transition: all 0.5s ease-in-out;
     opacity: 0.6;
-} */
+}
 
 .img-contnt {
   position: relative;
@@ -315,6 +341,7 @@ input:nth-of-type(5):checked~main#carousel {
   width: 160px;
   border-radius: 6px;
   overflow: hidden;
+  background-repeat: no-repeat;
   background-size: contain;
   
 }
@@ -339,25 +366,29 @@ opacity: 1;
 .overlay #share-hover{
   position: absolute;
   color: #fff;
-  top: 80%;
-  left: 10%;
-  font-size: 2rem;
+  top: 86%;
+  left: 8%;
+  font-size: 1rem;
 }
 
   .overlay #more-hover{
     position: absolute;
   color: #fff;
-  top:80%;
-  left: 80%;
-  font-size: 2rem;
-
-
+  top:86%;
+  left: 86%;
+  font-size: 1rem;
   }
 
-.song-name {
-  color: #fff;
-  margin-top: 6px;
-  font-size: 16px;
+  .song-name {
+    color: #fff;
+    margin-top: 6px;
+    font-family: proximanova-semibold-webfont,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 
@@ -367,21 +398,24 @@ opacity: 1;
 
 /* Side playlist queue CSS start from here */
 #side-queue {
-  width: 24.5%;
+  width: 24%;
   height: 90vh;
   display: flex;
   flex-direction: column;
   float: right;
   overflow: auto;
   color: #fff;
-  background: #1b1b1c;
-  border: 2px solid rgb(202, 3, 3);
+  box-shadow: -2px 2px 14px 10px hsl(223, 60%, 16%);
+  background-color: #070f24;;
 }
 
 .playlist-heading h1 {
-  font-size: 20px;
+  font-size: 24px;
   margin: 15px 0px 0px 20px;
   font-weight: 500;
+  font-family: proximanova-bold-webfont,Arial,sans-serif;
+  text-decoration: solid;
+  color: var(--text-color);
 }
 
 #side-queue .play-list {
@@ -390,20 +424,23 @@ opacity: 1;
 
 #side-queue .play-list h4 {
   font-size: 14px;
-  font-weight: 400;
-  color: #4c5262;
+  font-weight: 900;
+  color: #a9a9ad;
   cursor: pointer;
   display: flex;
   align-items: center;
-  transition: .3s linear;
+  transition:.3s linear;
 }
 
+.play-list  .active {
+  background-color: #2d3044;
+}
 .play-list .active span {
-  color: #36e2ec;
+  color: var(--text-color);
 }
 
 #side-queue .play-list h4:hover {
-  color: #fff;
+  color: var(--text-color);
 }
 
 .fa-music {
@@ -411,10 +448,25 @@ opacity: 1;
 }
 
 /* Side Queue song list CSS Start*/
+
 .song-list {
   width: 100%;
-  height: auto;
   margin-top: 40px;
+}
+.songItem{
+  display: flex;
+
+  height: 2.5rem;
+  width: 100%;
+}
+.sidePlay-list{
+  width: 70%;
+  display: flex;
+}
+.sidePlay-icon{
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .song-list li {
@@ -429,13 +481,13 @@ opacity: 1;
 }
 
 .song-list li:hover {
-  background: rgb(105, 105, 105, 0.1);
+  background-color: #444;
 }
 
 .song-list li span {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
-  color: #4c5262;
+  color: #8b8d91;
 }
 
 .song-list li img {
@@ -454,8 +506,8 @@ opacity: 1;
 }
 
 .song-list li h5 .subtitle {
-  font-size: 9px;
-  color: #4c5262;
+  font-size: 11px;
+  color: #98999d;
 }
 
 .song-list li h5 i{
@@ -467,12 +519,12 @@ opacity: 1;
 
 /* Side Queue masterplay CSS  */
 
-/* aside .master_play {
+ /* aside .master_play {
   display: flex;
   align-items: center;
   padding: 0px 20px;
   margin-top: 30px;
-}
+} */
 
  /* Wave CSS styling start from here */
 
@@ -507,11 +559,11 @@ aside .master_play .wave .wave3{
   margin-right: 3px;
   border-radius: 10px 10px 0px 0px;
   animation: wave 0.8s linear infinite;
-} */
+}  */
 
    /* Waves Animation start from here */
 
-/* @keyframes wave{
+ /* @keyframes wave{
 0%{
   height: 10px;
 }
