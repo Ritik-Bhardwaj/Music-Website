@@ -375,11 +375,13 @@ input:nth-of-type(5):checked~main#carousel {
   /* background-color: greenyellow; */
   cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20%;
   flex-direction: column;
   margin-right: 10px;
   margin-top: 10px;
-  padding: 0px 16px 16px 16px;
+  /* padding: 0px 16px 16px 16px; */
 }
 .song-card:hover{
   transform: scale(1.1);
@@ -537,6 +539,7 @@ opacity: 1;
   width: 100%;
 }
 .sidePlay-list{
+  position: relative;
   width: 70%;
   display: flex;
 }
@@ -560,7 +563,9 @@ opacity: 1;
 .song-list li:hover {
   background-color: #444;
 }
-
+.song-list li:hover #list-number{
+ opacity: 0;
+}
 .song-list li span {
   font-size: 14px;
   font-weight: 600;
@@ -595,21 +600,25 @@ opacity: 1;
 /* ----------------------------------------------------------------------------------------- */
 
 /* Side Queue Animation CSS start  */
-
-aside.master-play{
-  display: flex  ;
+aside .master-play{ 
+  display: flex;
   align-items: center;
-  padding: 0px 20px;  
+  }
+  .sidePlay-list:hover .wave{
+    display: flex;
   }
 
  /*side playlist  Wave CSS styling start from here */
   aside .master-play .wave{
+    position: absolute;
+    bottom: 5px;
     width: 30px;
     height: 30px;
     padding-bottom: 5px;
     display: flex;
     align-items: flex-end;
     margin-right: 10px;
+    display: none;
   }
   
   aside .master-play .wave .wave1{
@@ -651,7 +660,10 @@ aside.master-play{
 
 /* Media control CSS start from here --------------------------------------------------------------------*/
 
- #media-controls{
+  #media-controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;   
@@ -660,6 +672,8 @@ aside.master-play{
 }
 footer .master-play{
 display: flex  ;
+width: 100%;
+justify-content: space-between;
 align-items: center;
 padding: 0px 20px;  
 }
