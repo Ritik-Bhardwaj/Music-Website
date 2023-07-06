@@ -136,7 +136,7 @@ input.search-input {
 .user i{
   margin-top: 10px;
   margin-left: 5px;
-  color: var(--text-color);
+  color: #fff;
 }
 
 ul.nav-menu li {
@@ -376,12 +376,12 @@ input:nth-of-type(5):checked~main#carousel {
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:space-evenly;
   width: 20%;
   flex-direction: column;
   margin-right: 10px;
   margin-top: 10px;
-  /* padding: 0px 16px 16px 16px; */
+  
 }
 .song-card:hover{
   transform: scale(1.1);
@@ -440,6 +440,7 @@ opacity: 1;
 
   .song-name {
     color: #fff;
+    width: 100%;
     margin-top: 6px;
     font-family: proximanova-semibold-webfont,Arial,sans-serif;
     font-size: 14px;
@@ -659,7 +660,11 @@ aside .master-play{
 
 
 /* Media control CSS start from here --------------------------------------------------------------------*/
-
+footer #audio-icon img{
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
   #media-controls{
   display: flex;
   justify-content: center;
@@ -669,6 +674,13 @@ aside .master-play{
   width: 100%;   
   background-color: #333;
   height: 5rem;
+}
+
+.slider-up i{
+  color: #fff;
+}
+.maximize i{
+  color: #fff;
 }
 footer .master-play{
 display: flex  ;
@@ -725,7 +737,7 @@ footer .master-play img{
 }
 footer .master-play h5{
   width: 130px;
-  margin-right: 15px;
+  margin-left: 10px;
   color:#ffff;
   line-height: 17px;
   overflow: hidden;
@@ -746,33 +758,32 @@ footer .master-play .masterplay-icon{
   color:#fff;
   margin: 0px 20px 0px 40px;
   outline: none;
+  display: flex;
   align-items: center;
 }
+.masterplay-icon .fa-solid {
+  margin: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
 footer .master-play .masterplay-icon .fa-solid{
   cursor: pointer;
   outline: none;
 }
 
-footer .master-play .masterplay-icon .fa-shuffle{
-  margin-right:10px ;
-  width: 16px;
-  overflow: hidden;
-  outline: none;
-}
-footer .master-play .masterplay-icon #download-music{
-margin-left: 10px;
-}
 
 footer .master-play .masterplay-icon i:nth-child(3){
- padding: 1px 5px 0px 7px;
  margin: 0px 5px;
+ font-size: 2rem;
+ 
 }
-footer .master-play span{
-  color:bisque;
-  width: 32px;
-  font-size: 14px;
-  font-weight: 400;
-}
+  footer .master-play span{
+    color:bisque;
+    width: 32px;
+    font-size: 14px;
+    font-weight: 400;
+  }
 
 footer .master-play #current-start{
   margin: 0px 0px 0px 30px;
@@ -876,6 +887,36 @@ footer .master-play .vol .dot::before{
   top: -6px;
   left:-7px;
   box-shadow: inset 0px 0px 3px var(--text-color);
+}
+.song-play{
+  width: 10%;
+  display:flex;
+  align-items: center;
+}
+footer .audio-control1{
+  width: 100%; 
+  display: flex;
+  margin-right: -10%;
+   flex-direction: column;
+    align-items: center;
+}
+footer .audio-icon{
+  display: flex; 
+  width: 100%; 
+  align-items: center;
+   justify-content: center;
+}
+
+.audio-control2{
+  width: 30%; 
+  display: flex;
+   /* flex-direction: column; */
+   justify-content: space-around;
+    align-items: center;
+    
+}
+.slider-up {
+  margin-left: 40%;
 }
 
 

@@ -531,6 +531,7 @@
   <footer>
     <div id="media-controls">
       <div class="master-play">
+       <div class="song-play">
         <div class="wave">
           <div class="wave1"></div>
           <div class="wave1"></div>
@@ -543,17 +544,19 @@
             Artist name
           </div>
         </h5>
-        <div style="width: 70%; display: flex; flex-direction: column; align-items: center;">
-          <div class="masterplay-icon">
-            <i class="fa-solid fa-shuffle fa-music fa-beat-fade"></i>
+      </div>
+
+        <div class="audio-control1"> 
+          <div class="masterplay-icon">            
             <i class="fa-solid fa-shuffle"></i>
             <i class="fa-solid fa-backward-step"></i>
             <i class="fa-solid fa-circle-play"></i>
             <i class="fa-solid fa-forward-step"></i>
-            <i class="fa-solid fa-cloud-arrow-down" id="download-music"></i>
             <i class="fa-solid fa-repeat"></i>
+            <i class="fa-solid fa-cloud-arrow-down"></i>      
           </div>
-          <div style="display: flex; width: 100%; align-items: center; justify-content: center;">
+
+          <div class="audio-icon"> 
             <span id="current-start">2:00</span>
             <div class="seek-bar">
               <input type="range" id="seek" min="0" max="100">
@@ -564,23 +567,26 @@
           </div>
         </div>
 
+        <div class="audio-control2">
         <div class="slider-up">
           <i class="fa-solid fa-sliders"></i>
         </div>
+        <div id="audio-icon"> 
+          <img src="https://cdn-icons-png.flaticon.com/512/8736/8736763.png"  alt="">
+        </div>
         <div class="vol">
-          <div class="connect-device">
-            <i class="fa-solid fa-computer-speaker"></i>
-          </div>
-          <i class="fa-solid fa-volume-low" id="vol-icon"></i>
+            <i class="fa-solid fa-volume-low" id="vol-icon"></i>
           <input type="range" id="seek" min="0" max="100" id="vol">
           <div class="vol-bar"> </div>
           <div class="dot" id="vol-dot"></div>
         </div>
+        <div id="audio-icon"> 
+          <img src="https://cdn-icons-png.flaticon.com/512/4211/4211451.png"  alt="">
+        </div>
         <div class="maximize">
-          <i class="fa-solid fa-list-music"></i>
           <i class="fa-sharp fa-solid fa-up-right-and-down-left-from-center"></i>
         </div>
-
+        </div>
       </div>
     </div>
   </footer>
