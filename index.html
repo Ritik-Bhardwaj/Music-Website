@@ -33,7 +33,9 @@
         <div id="search-bar">
           <img class="search-icon" width="16" height="16" src="https://img.icons8.com/search" alt="search--v1" />
           <input class="search-input" placeholder="Search Artists, Songs, Albums" type="search" name="" id="" />
+          <div class="microphone">
           <i class="fa-solid fa-microphone"></i>
+          </div>
         </div>
         <div class="user">
           <img src="Assets/img/user.jpg" alt="">
@@ -59,9 +61,8 @@
    
   </header>
   <!-- Header part end here -->
-
+<main>
   <div id="wrapper">
-    <main>
       <section id="content-section">
         <!-- Carousel start from here -->
         <div id="arrow">
@@ -88,6 +89,7 @@
           </main>
         </div>
         <!-- Carousel end here -->
+        
         <!-- Recently played section start from here -->
         <section class="songs-sections">
           <div class="section-heading">
@@ -133,7 +135,7 @@
          </section>
         <!-- Recently played section end here -->
 
-        <!-- Cards section start from here -->
+        <!-- Trending Songs Cards section start from here -->
         <section class="songs-sections">
          <div class="section-heading">
           <h2>Trending Songs</h2>
@@ -209,8 +211,89 @@
 
           </div>
         </section>
-        <!-- Cards section end here -->
+        <!-- Trending Songs Cards section end here ---->
+
+        <!-- Featured Artist section Start from here -->
+        <section class="songs-sections">
+          <div class="section-heading">
+           <h2>Featured Artist</h2>
+         <h4 class="show-all"><a href="#">Show All</a></h4>
+          </div>
+           <div class="songs-contnt">
+ 
+             <div class="song-card">
+               <div class="img-contnt" style="background-image: url(Assets/img/Diljit_Dosanjh.jpg);">
+                 <div class="overlay">
+                   <i class="fa-solid fa-play" id="play-hover"></i>
+                   <i class="fa-solid fa-share" id="share-hover"></i>
+                   <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                 </div>
+               </div>
+               <p class="song-name">Meri Zindgi hai tu</p>
+             </div>
+ 
+              <div class="song-card">
+               <div class="img-contnt" style="background-image: url(Assets/img/jubin\ Nautiyal.jpg);">
+                 <div class="overlay">
+                   <i class="fa-solid fa-play" id="play-hover"></i>
+                   <i class="fa-solid fa-share" id="share-hover"></i>
+                   <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                 </div>
+               </div>
+               <p class="song-name">Meri Zindgi hai tu</p>
+             </div>
+ 
+             <div class="song-card">
+               <div class="img-contnt" style="background-image: url(Assets/img/17.jpg);">
+                 <div class="overlay">
+                   <i class="fa-solid fa-play" id="play-hover"></i>
+                   <i class="fa-solid fa-share" id="share-hover"></i>
+                   <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                 </div>
+               </div>
+               <p class="song-name">Meri Zindgi hai tu</p>
+             </div>
+ 
+             <div class="song-card">
+               <div class="img-contnt" style="background-image: url(Assets/img/akhil.jpg);">
+                 <div class="overlay">
+                   <i class="fa-solid fa-play" id="play-hover"></i>
+                   <i class="fa-solid fa-share" id="share-hover"></i>
+                   <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                 </div>
+               </div>
+               <p class="song-name">Meri Zindgi hai tu</p>
+             </div>
+ 
+             <div class="song-card">
+               <div class="img-contnt" style="background-image: url(Assets/img/arjit.jpg);">
+                 <div class="overlay">
+                   <i class="fa-solid fa-play" id="play-hover"></i>
+                   <i class="fa-solid fa-share" id="share-hover"></i>
+                   <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                 </div>
+               </div>
+               <p class="song-name">Meri Zindgi hai tu</p>
+             </div>
+ 
+             <div class="song-card">
+               <div class="img-contnt" style="background-image: url(Assets/img/guru.jpg);">
+                 <div class="overlay">
+                   <i class="fa-solid fa-play" id="play-hover"></i>
+                   <i class="fa-solid fa-share" id="share-hover"></i>
+                   <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                 </div>
+               </div>
+               <p class="song-name">Meri Zindgi hai tu</p>
+             </div>
+ 
+           </div>
+         </section>
+        <!-- Featured Artist section closed here -->
+
       </section>
+      <!-- Conternt Section closed here -------------->
+
 
       <!-- Side Queue code start from here -->
       <aside id="side-queue">
@@ -266,6 +349,13 @@
 
           <li class="songItem">
             <div class="sidePlay-list">
+              <div class="master-play">
+                <div class="wave">
+                    <div class="wave1"></div>
+                    <div class="wave1"></div>
+                    <div class="wave1"></div>
+                   </div>
+                </div>
             <span>03</span>
              <div class="master_play">
           <div class="wave">
@@ -440,8 +530,8 @@
           </li>
         <!-- Side Queue Songs list section end -->
         </aside>      
-    </main>
   </div>
+</main>
 
 
 
@@ -452,7 +542,7 @@
     <div class="wave1"></div>
     <div class="wave1"></div>
     <div class="wave1"></div>
-    <div class="wave1"></div>
+
 
 </div>
 <img src="Assets/img/9.jpg" alt="" id="thumbnail-masterPlay">

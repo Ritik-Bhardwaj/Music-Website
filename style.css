@@ -15,8 +15,14 @@ body {
 
 #wrapper{
   background-color: #000;
-  padding: 10px;
+  padding: 20px;
+  scroll-behavior: smooth;
 }
+/* header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+} */
 
 :root{
   --text-color:#e51d53;
@@ -44,6 +50,12 @@ body {
   display: flex;
   justify-content: center;
 }
+/* Website logo CSS */
+.header-logo{
+  border-radius: 10px;
+  margin-right: 10px;
+}
+/* Website Name CSS  */
 .title h1 {
   margin: 0;
   color: var(--text-color);
@@ -92,14 +104,32 @@ input.search-input {
   outline: none;
   padding-left: 30px;
 }
-
+.microphone{
+  position: absolute;
+  color: var(--text-color);
+  top: 10%;
+  left: 80%;
+}
 #right-nav>div {
   position: relative;
+}
+.user{
+  width: 35%;
+  margin-right: 45px;
+  display: flex;
+  justify-content: flex-end;
+
 }
 .user img{
  height: 2.5rem;
  width: 2.5rem;
  border-radius: 50%;
+
+}
+.user i{
+  margin-top: 10px;
+  margin-left: 5px;
+  color: var(--text-color);
 }
 
 ul.nav-menu li {
@@ -136,7 +166,7 @@ background-color: #0b142d;
 }
 
  
-/*  Carousel CSS start from here */
+/*  Carousel CSS start from here ----------------------------------------------------------------------- */
 /* Slider CSS */
 #slider {
   height: 425px;
@@ -290,19 +320,27 @@ input:nth-of-type(5):checked~main#carousel {
   height: 60vh;
   width: 35vw;
 }
+/* Carousel CSS End here --------------------------------------------------------------------- */
+
  
- /* Songs cards slider CSS Start from here */
+ /* Songs cards slider section CSS Start from here ----------------------------------------------- */
 .songs-section {
   margin: 50px 0px;
 }
 
 .section-heading {
-  margin-bottom: 20px;
-  font-size: 24px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-family:proximanova-semibold-webfont, Arial, sans-serif;
   color: #efeeee;
   display: flex;
+  padding-left: 2rem;
+  /* background-color: wheat; */
   justify-content: space-between;
   text-transform: capitalize;
+}
+.section-heading h2:hover{
+  text-decoration: underline var(--text-color);
 }
 .show-all{
   color: #ffffff;
@@ -319,15 +357,26 @@ input:nth-of-type(5):checked~main#carousel {
 }
 
 .songs-contnt {
+  /* background-color: aqua; */
   display: flex;
+  padding: 0px 16px 16px 16px;
   flex-direction: row;
   overflow: hidden;
 }
 
 .song-card {
+  /* background-color: greenyellow; */
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  margin-right: 45px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 0px 16px 16px 16px;
+}
+.song-card:hover{
+  padding-top: 6px;
+  box-shadow:  1px -1px 10px 10px rgb(17 39 110 / 50%);
+  transition: all .3s ease-in-out;
 }
 
 .song-card img:hover {
@@ -390,13 +439,33 @@ opacity: 1;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+/* ----------------------------------------------------------------------------------------- */
 
 
+/* Side playlist queue CSS start from here --------------------------------------------------------*/
+/* Scroll bar CSS start ---------*/
+/* width */
+#side-queue::-webkit-scrollbar {
+  width: 8px;
+}
 
+/* Track */
+#side-queue::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #d60f44; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+#side-queue::-webkit-scrollbar-thumb {
+  background:var(--text-color); 
+  border-radius: 10px;
+}
 
-
-
-/* Side playlist queue CSS start from here */
+/* Handle on hover */
+#side-queue::-webkit-scrollbar-thumb:hover {
+  background: #444; 
+}
+/* Scroll bar CSS end ---------*/
 #side-queue {
   width: 24%;
   height: 90vh;
@@ -514,79 +583,70 @@ opacity: 1;
  position: absolute;
  right: 25px; 
 }
-
 /* Side Queue Song list CSS end */
+/* ----------------------------------------------------------------------------------------- */
 
-/* Side Queue masterplay CSS  */
+/* Side Queue Animation CSS start  */
 
- /* aside .master_play {
-  display: flex;
+aside.master-play{
+  display: flex  ;
   align-items: center;
-  padding: 0px 20px;
-  margin-top: 30px;
-} */
+  padding: 0px 20px;  
+  }
 
- /* Wave CSS styling start from here */
+ /*side playlist  Wave CSS styling start from here */
+  aside .master-play .wave{
+    width: 30px;
+    height: 30px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+  }
+  
+  aside .master-play .wave .wave1{
+    width: 4px;
+    height: 10px;
+    background: var(--text-color);
+    margin-right: 3px;
+    border-radius: 10px 10px 0px 0px;
+    animation: wave .3s linear infinite;
+  }
+  aside .master-play .wave .wave1:nth-child(2){
+    height: 7px;
+    margin-right: 3.5;
+    animation-delay: .4s;
+  }
+  
+  aside .master-play .wave .wave1:nth-child(3){
+    height: 8px;
+    animation-delay: .8s;
+  }
 
-/* aside .master_play .wave{
-  width: 30px;
-  height: 30px;
-  padding-bottom: 5px;
-  display: flex;
-  align-items: flex-end;
-  margin-right: 10px;
-}
-aside .master_play .wave .wave1{
-  width: 3px;
-  height: 10px;
-  background: #36e2ec;
-  margin-right: 3px;
-  border-radius: 10px 10px 0px 0px;
-  animation: wave 0.3s linear infinite;
-}
-aside .master_play .wave .wave2{
-  width: 3px;
-  height: 13px;
-  background: #36e2ec;
-  margin-right: 3px;
-  border-radius: 10px 10px 0px 0px;
-  animation: wave 0.4s linear infinite;
-}
-aside .master_play .wave .wave3{
-  width: 3px;
-  height: 8px;
-  background: #36e2ec;
-  margin-right: 3px;
-  border-radius: 10px 10px 0px 0px;
-  animation: wave 0.8s linear infinite;
-}  */
+  @keyframes wave{
+    0%{
+        height: 10px;
+    }
+    50%{
+        height: 15px;
+    }
+    100%{
+        height: 10px;
+    }
+  }
+  
+ /* side playlist Waves Animation end  here */
 
-   /* Waves Animation start from here */
-
- /* @keyframes wave{
-0%{
-  height: 10px;
-}
-50%{
-  height: 10px;
-}
-100%{
-  height: 10px;
-}
-}  */
-
- /* Waves Animation end  here */
-
- /* Wave CSS styling end here */
+ /* side playlist Wave CSS styling end here */
+/* --------------------------------------------------------------------------------------------- */
 
 
-
-
-
+/* Media control CSS start from here --------------------------------------------------------------------*/
 
  #media-controls{
+  /* position: fixed; */
   width: 100%;   
-  background-color: #d3a2a2;
+  background-color: #333;
 }
 footer .master-play{
 display: flex  ;
@@ -606,7 +666,7 @@ footer .master-play .wave{
 footer .master-play .wave .wave1{
   width: 4px;
   height: 10px;
-  background: aquamarine;
+  background: var(--text-color);
   margin-right: 3px;
   border-radius: 10px 10px 0px 0px;
   animation: wave .3s linear infinite;
@@ -621,10 +681,7 @@ footer .master-play .wave .wave1:nth-child(3){
   height: 8px;
   animation-delay: .8s;
 }
-footer .master-play .wave .wave1:nth-child(4){
-  height: 15px;
-  animation-delay: .8s;
-}
+
 @keyframes wave{
   0%{
       height: 10px;
@@ -705,17 +762,17 @@ footer .master-play .seek-bar{
 }
 footer .master-play .seek-bar .seek-bar2{
   position: absolute;
-  background: #36e2ec;
+  background: var(--text-color);
   width: 70%;
-  height: 50%;
-  top: 1px;
+  height: 100%;
+  top: 0px;
   transition: 1s linear;
 }
 footer .master-play .seek-bar .dot{
 position: absolute;
 width: 5px;
 height: 5px;
-background: #36e2ec;
+background: var(--text-color);
 border-radius: 50%;
 left: 70%;
 top: -1.5px;  
@@ -726,11 +783,11 @@ footer .master-play .seek-bar .dot::before{
   position: absolute;
   width: 15px;
   height: 15px;
-  border: 1px solid #36e2ec;
+  border: 1px solid var(--text-color);
   border-radius: 50%;
   top: -6px;
   left:-7px;
-  box-shadow: inset 0px 0px 3px #36e2ec;
+  box-shadow: inset 0px 0px 3px var(--text-color);
 }
 footer .master-play .seek-bar input{
   position:absolute;
@@ -767,7 +824,7 @@ footer .master-play .vol input{
 }
 footer .master-play .vol .vol-bar{
   position: absolute;
-  background: #36e2ec;
+  background: var(--text-color);
   width: 40%;
   height: 100%;
   top:0px;
@@ -778,7 +835,7 @@ footer .master-play .vol .dot{
   position: absolute;
 width: 5px;
 height: 5px;
-background: #36e2ec;
+background:var(--text-color);
 border-radius: 50%;
 left: 40%;
 top: -1.5px;  
@@ -790,9 +847,12 @@ footer .master-play .vol .dot::before{
   position: absolute;
   width: 15px;
   height: 15px;
-  border: 1px solid #36e2ec;
+  border: 1px solid var(--text-color);
   border-radius: 50%;
   top: -6px;
   left:-7px;
-  box-shadow: inset 0px 0px 3px #36e2ec;
+  box-shadow: inset 0px 0px 3px var(--text-color);
 }
+
+
+/* Media control styling end here */
