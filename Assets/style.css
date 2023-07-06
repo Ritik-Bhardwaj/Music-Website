@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+header {
+    position: sticky;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+}
+
 /* Google Font Poppins */
 body {
   font-family: 'Poppins', 'sans-serif';
@@ -368,15 +375,16 @@ input:nth-of-type(5):checked~main#carousel {
   /* background-color: greenyellow; */
   cursor: pointer;
   display: flex;
+  width: 20%;
   flex-direction: column;
   margin-right: 10px;
   margin-top: 10px;
   padding: 0px 16px 16px 16px;
 }
 .song-card:hover{
-  padding-top: 6px;
+  transform: scale(1.1);
   box-shadow:  1px -1px 10px 10px rgb(17 39 110 / 50%);
-  transition: all .3s ease-in-out;
+  transition:.5s ease-in-out;
 }
 
 .song-card img:hover {
@@ -625,13 +633,13 @@ aside.master-play{
 
   @keyframes wave{
     0%{
-        height: 10px;
+        height: 7px;
     }
     50%{
         height: 15px;
     }
     100%{
-        height: 10px;
+        height: 5px;
     }
   }
   
@@ -644,9 +652,11 @@ aside.master-play{
 /* Media control CSS start from here --------------------------------------------------------------------*/
 
  #media-controls{
-  /* position: fixed; */
+  position: fixed;
+  bottom: 0;
   width: 100%;   
   background-color: #333;
+  height: 5rem;
 }
 footer .master-play{
 display: flex  ;
