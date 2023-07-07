@@ -7,13 +7,6 @@
   box-sizing: border-box;
 }
 
-header {
-    position: sticky;
-    width: 100%;
-    z-index: 2;
-    top: 0;
-}
-
 /* Google Font Poppins */
 body {
   font-family: 'Poppins', 'sans-serif';
@@ -25,11 +18,38 @@ body {
   padding: 20px;
   scroll-behavior: smooth;
 }
-/* header {
-  position: fixed;
-  z-index: 2;
+
+/* Scroll bar CSS start ---------*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #444; 
+  border-radius: 10px;
+} 
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:var(--text-color); 
+  border-radius: 10px;
+} 
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #444; 
+}  
+/* Scroll bar CSS start ---------*/
+
+
+header {
+  position: sticky;
   width: 100%;
-} */
+  z-index: 2;
+  top: 0;
+}
 
 :root{
   --text-color:#e51d53;
@@ -454,29 +474,14 @@ opacity: 1;
 
 
 /* Side playlist queue CSS start from here --------------------------------------------------------*/
+
 /* Scroll bar CSS start ---------*/
-/* width */
 #side-queue::-webkit-scrollbar {
-  width: 8px;
+display: none;
 }
 
-/* Track */
-#side-queue::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #d60f44; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-#side-queue::-webkit-scrollbar-thumb {
-  background:var(--text-color); 
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-#side-queue::-webkit-scrollbar-thumb:hover {
-  background: #444; 
-}
 /* Scroll bar CSS end ---------*/
+
 #side-queue {
   width: 24%;
   height: 90vh;
@@ -564,7 +569,7 @@ opacity: 1;
 .song-list li:hover {
   background-color: #444;
 }
-.song-list li:hover #list-number{
+.song-list li #list-number{
  opacity: 0;
 }
 .song-list li span {
@@ -605,8 +610,11 @@ aside .master-play{
   display: flex;
   align-items: center;
   }
-  .sidePlay-list:hover .wave{
-    display: flex;
+ .active-play .master-play .wave{
+        opacity: 1;
+  }
+  .sidePlay-icon.active-play i{
+    color: var(--text-color);
   }
 
  /*side playlist  Wave CSS styling start from here */
@@ -619,7 +627,7 @@ aside .master-play{
     display: flex;
     align-items: flex-end;
     margin-right: 10px;
-    display: none;
+    opacity: 0;
   }
   
   aside .master-play .wave .wave1{
@@ -660,7 +668,7 @@ aside .master-play{
 
 
 /* Media control CSS start from here --------------------------------------------------------------------*/
-footer #audio-icon img{
+.footer #audio-icon img{
   width: 16px;
   height: 16px;
   filter: brightness(0) invert(1);
@@ -682,7 +690,7 @@ footer #audio-icon img{
 .maximize i{
   color: #fff;
 }
-footer .master-play{
+.footer .master-play{
 display: flex  ;
 width: 100%;
 justify-content: space-between;
@@ -690,7 +698,7 @@ align-items: center;
 padding: 0px 20px;  
 }
 
-footer .master-play .wave{
+.footer .master-play .wave{
   width: 30px;
   height: 30px;
   padding-bottom: 5px;
@@ -699,7 +707,7 @@ footer .master-play .wave{
   margin-right: 10px;
 }
 
-footer .master-play .wave .wave1{
+.footer .master-play .wave .wave1{
   width: 4px;
   height: 10px;
   background: var(--text-color);
@@ -707,13 +715,13 @@ footer .master-play .wave .wave1{
   border-radius: 10px 10px 0px 0px;
   animation: wave .3s linear infinite;
 }
-footer .master-play .wave .wave1:nth-child(2){
+.footer .master-play .wave .wave1:nth-child(2){
   height: 7px;
   margin-right: 3.5;
   animation-delay: .4s;
 }
 
-footer .master-play .wave .wave1:nth-child(3){
+.footer .master-play .wave .wave1:nth-child(3){
   height: 8px;
   animation-delay: .8s;
 }
@@ -730,12 +738,12 @@ footer .master-play .wave .wave1:nth-child(3){
   }
 }
 
-footer .master-play img{
+.footer .master-play img{
   width: 45px;
   height: 45px;
   border-radius: 6px;
 }
-footer .master-play h5{
+.footer .master-play h5{
   width: 130px;
   margin-left: 10px;
   color:#ffff;
@@ -745,7 +753,7 @@ footer .master-play h5{
   white-space: nowrap;
   font-size: 13px;
 }
-footer .master-play h5 .subtitle{
+.footer .master-play h5 .subtitle{
   font-size: 11px;
   color: rgb(200, 202, 192);
   overflow: hidden;
@@ -753,7 +761,7 @@ footer .master-play h5 .subtitle{
   white-space: nowrap;
 }
 
-footer .master-play .masterplay-icon{
+.footer .master-play .masterplay-icon{
   font-size: 16px;
   color:#fff;
   margin: 0px 20px 0px 40px;
@@ -767,35 +775,35 @@ footer .master-play .masterplay-icon{
   font-size: 16px;
 }
 
-footer .master-play .masterplay-icon .fa-solid{
+.footer .master-play .masterplay-icon .fa-solid{
   cursor: pointer;
   outline: none;
 }
 
 
-footer .master-play .masterplay-icon i:nth-child(3){
+.footer .master-play .masterplay-icon i:nth-child(3){
  margin: 0px 5px;
  font-size: 2rem;
  
 }
-  footer .master-play span{
+  .footer .master-play span{
     color:bisque;
     width: 32px;
     font-size: 14px;
     font-weight: 400;
   }
 
-footer .master-play #current-start{
+.footer .master-play #current-start{
   margin: 0px 0px 0px 30px;
 }
-footer .master-play .seek-bar{
+.footer .master-play .seek-bar{
   position: relative;
   width:43%;
   height: 2px;
   background:#c9c9d2c4;
   margin: 0px 15px 0px 10px;
 }
-footer .master-play .seek-bar .seek-bar2{
+.footer .master-play .seek-bar .seek-bar2{
   position: absolute;
   background: var(--text-color);
   width: 70%;
@@ -803,7 +811,7 @@ footer .master-play .seek-bar .seek-bar2{
   top: 0px;
   transition: 1s linear;
 }
-footer .master-play .seek-bar .dot{
+.footer .master-play .seek-bar .dot{
 position: absolute;
 width: 5px;
 height: 5px;
@@ -813,7 +821,7 @@ left: 70%;
 top: -1.5px;  
 transition: 1s linear;
 }
-footer .master-play .seek-bar .dot::before{
+.footer .master-play .seek-bar .dot::before{
   content: '';
   position: absolute;
   width: 15px;
@@ -824,7 +832,7 @@ footer .master-play .seek-bar .dot::before{
   left:-7px;
   box-shadow: inset 0px 0px 3px var(--text-color);
 }
-footer .master-play .seek-bar input{
+.footer .master-play .seek-bar input{
   position:absolute;
   width: 100%;
   top:-7px;
@@ -833,7 +841,7 @@ footer .master-play .seek-bar input{
   z-index: 2;
   opacity: 0;
 }
-footer .master-play .vol{
+.footer .master-play .vol{
   position: relative;
   width: 100px;
   height: 2px;
@@ -841,14 +849,14 @@ footer .master-play .vol{
   margin-left: 50px;
 }
 
-footer .master-play .vol .fa-solid{
+.footer .master-play .vol .fa-solid{
   position: absolute;
   color: #fff;
   font-size: 20px;
   top:-10px;
   left: -30px;
 }
-footer .master-play .vol input{
+.footer .master-play .vol input{
   position: absolute;
   width: 100%;
   top: -10px;
@@ -857,7 +865,7 @@ footer .master-play .vol input{
   z-index: 3;
   opacity: 0;
 }
-footer .master-play .vol .vol-bar{
+.footer .master-play .vol .vol-bar{
   position: absolute;
   background: var(--text-color);
   width: 40%;
@@ -866,7 +874,7 @@ footer .master-play .vol .vol-bar{
   transition: 1s linear;
 }
 
-footer .master-play .vol .dot{
+.footer .master-play .vol .dot{
   position: absolute;
 width: 5px;
 height: 5px;
@@ -877,7 +885,7 @@ top: -1.5px;
 transition: 1s linear;  
 }
 
-footer .master-play .vol .dot::before{
+.footer .master-play .vol .dot::before{
   content: '';
   position: absolute;
   width: 15px;
@@ -893,14 +901,14 @@ footer .master-play .vol .dot::before{
   display:flex;
   align-items: center;
 }
-footer .audio-control1{
+.footer .audio-control1{
   width: 100%; 
   display: flex;
   margin-right: -10%;
    flex-direction: column;
     align-items: center;
 }
-footer .audio-icon{
+.footer .audio-icon{
   display: flex; 
   width: 100%; 
   align-items: center;
@@ -913,8 +921,8 @@ footer .audio-icon{
    /* flex-direction: column; */
    justify-content: space-around;
     align-items: center;
-    
 }
+
 .slider-up {
   margin-left: 40%;
 }
