@@ -190,6 +190,7 @@ li a:hover {
   display: inline-block;
   box-shadow: 4px 0px 13px 9px #132450;
 background-color: #0b142d;
+margin-bottom: 70px;
 }
 
  
@@ -356,13 +357,14 @@ input:nth-of-type(5):checked~main#carousel {
 }
 
 .section-heading {
-  margin-top: 20px;
+  margin-top: 1.3rem;
+  margin-left: 1rem ;
   font-size: 1rem;
   font-family:proximanova-semibold-webfont, Arial, sans-serif;
   color: #efeeee;
   display: flex;
-  padding-left: 2rem;
   /* background-color: wheat; */
+  padding-left: 2rem;
   justify-content: space-between;
   text-transform: capitalize;
 }
@@ -398,6 +400,7 @@ input:nth-of-type(5):checked~main#carousel {
   align-items: center;
   justify-content:space-evenly;
   width: 20%;
+  padding: .8rem;
   flex-direction: column;
   margin-right: 10px;
   margin-top: 10px;
@@ -405,7 +408,7 @@ input:nth-of-type(5):checked~main#carousel {
 }
 .song-card:hover{
   transform: scale(1.1);
-  box-shadow:  1px -1px 10px 10px rgb(17 39 110 / 50%);
+
   transition:.5s ease-in-out;
 }
 
@@ -421,8 +424,10 @@ input:nth-of-type(5):checked~main#carousel {
   border-radius: 6px;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-size: contain;
-  
+  background-size: contain; 
+}
+.img-contnt:hover{
+    box-shadow:  1px -1px 5px 5px rgb(17 39 110 / 50%);
 }
 
 .overlay{
@@ -460,8 +465,8 @@ opacity: 1;
 
   .song-name {
     color: #fff;
-    width: 100%;
-    margin-top: 6px;
+    width: 85%;
+     margin-top: 6px;
     font-family: proximanova-semibold-webfont,Arial,sans-serif;
     font-size: 14px;
     line-height: 2;
@@ -469,6 +474,9 @@ opacity: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.song-name:hover{
+  border-bottom: 2px solid var(--text-color);
 }
 /* ----------------------------------------------------------------------------------------- */
 
@@ -673,6 +681,11 @@ aside .master-play{
   height: 16px;
   filter: brightness(0) invert(1);
 }
+.footer #connectDevice-icon img{
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
   #media-controls{
   display: flex;
   justify-content: center;
@@ -781,7 +794,7 @@ padding: 0px 20px;
 }
 
 
-.footer .master-play .masterplay-icon i:nth-child(3){
+.footer .master-play .masterplay-icon .fa-circle-play{
  margin: 0px 5px;
  font-size: 2rem;
  
@@ -922,9 +935,14 @@ transition: 1s linear;
    justify-content: space-around;
     align-items: center;
 }
-
+.audio-control2 img{
+  margin-left:10px;
+}
+div#connectDevice-icon {
+  margin-left: 10px;
+}
 .slider-up {
-  margin-left: 40%;
+  margin-left: 20%;
 }
 
 
