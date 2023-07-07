@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style-type: none;
+    background-color: #edecec66;
+    align-items: center;
+    padding: 5px;
+    margin: 0px;
+    border-bottom: 1px solid;
+}
+
+.serial-number{
+    width: 2%;
+}
+.track, .artist, .album{
+ width: 25%;
+}
+.duration{
+    width: 12%;
+}
+.download{
+    width: 11%;
+}
+section{
+    display: flex;
+    width: 70%;
+    position: relative;
+    left: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.s-No{
+    width: 100%;
+    text-align: right;
+}
+.track-wrapper{
+width: 100%;
+display:flex;
+align-items: center;
+}
+.track-image{
+    height: 100%;
+    display: inline-block;
+    width: 20%;
+}
+.track-image img{
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+}
+
+    #header li{
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+      span.heart, span.dot {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Added property for horizontal centering */
+      }
+      
+      span.heart i {
+        margin-left: 35%;
+      }
+      
+      span.dot {
+        margin-left: 65%;
+      }
+
+.album{
+    display: flex;
+   
+}
+.album-name{
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.heart{
+    width: 25%;
+    float: right;
+    
+}
+
+.menu{
+  width: 25%;
+  float: right;
+}
