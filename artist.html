@@ -15,7 +15,53 @@
 </head>
 
 <body>
+    <header>
+        <!-- Nav menu section start from here -->
+        <nav id="nav1">
+          <div id="left-nav">
+            <a href="index.html"><img class="header-logo" height="80px" width="100px" src="./Assets/img/logo.jpg" alt="Image not loaded"/></a>
+    
+            <div class="title">
+             <a href="index.html"><h1><span>musically</span>
+              </h1></a>
+            </div>
+    
+          </div>
+          <div id="right-nav">
+            <div id="search-bar">
+              <img class="search-icon" width="16" height="16" src="https://img.icons8.com/search" alt="search--v1" />
+              <input class="search-input" placeholder="Search Artists, Songs, Albums" type="search" name="" id="" />
+              <div class="microphone">
+                <i class="fa-solid fa-microphone"></i>
+              </div>
+            </div>
+            <div class="user">
+              <img src="Assets/img/user.jpg" alt="">
+              <i class="fa-regular fa-user"></i>
+            </div>
+          </div>
+        </nav>
+    
+        <nav id="nav2">
+          <ul class="nav-menu">
+            <li><a class="active" href="#all">All </a></li>
+            <li><a href="#trending-songs">Trending Songs</a></li>
+            <li><a href="#new-songs">New Songs</a></li>
+            <li><a href="#old-songs">Old Songs</a></li>
+            <li><a href="#moods-genres">Moods Genres</a></li>
+            <li><a href="#album">Album</a></li>
+            <li><a href="#radio">Radio</a></li>
+            <li><a href="#podcast">Podcast</a></li>
+            <li><a href="#my-music">My Music</a></li>
+          </ul>
+        </nav>
+        <!-- Nav menu section end here -->
+    
+      </header>
+
+
     <main>
+        <div id="wrapper">
         <div class="wrap">
             <section class="info-sec">
                 <div class="bg-image">
@@ -23,10 +69,12 @@
                 </div>
 
                 <div class="info">
-                    <h1 class="artist-name">Arijit Singh </h1>
+                    <h1 class="artist-name">Arijit Singh Songs</h1>
                     <div class="sub-info">
-                        <p>1158 Tracks2 Episodes595 Albums</p>
-                    </div>
+                        <div>1158 Tracks</div>
+                        <div>2 Episodes</div>
+                        <div>595 Albums</div>
+                      </div>
                     <div class="sort-bio">
                         <p>Whenever we talk about a Bollywood singer who sings amazingly beautiful songs, we cannot
                             afford to miss one name viz Arijit Singh. Be it a wedding or a romantic dinner or a party,
@@ -53,8 +101,7 @@
         </div>
 
 
-        <section>
-            <h1>Playlist</h1>
+        <section id="playlist">
             <ul id="header">
                 <li class="serial-number"> </li>
                 <li class="track"><span> Track</span></li>
@@ -71,7 +118,7 @@
                     <div class="track-wrapper">
                         <div class="track-image">
                             <img
-                                src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/music-songs-youtube-thumbnails-design-template-f0fcb6a767bf70426fb7a5109709c4fe.jpg?ts=1600929244">
+                                src="./Assets/img/18.jpg">
                         </div>
                         <div class="track-name"><span> Shrivali</span>
                         </div>
@@ -81,8 +128,8 @@
                 <li class="artist"><span>Javed Ali</span></li>
                 <li class="album">
                     <div class="album-name">Pushpa the rise </div>
-                    <div class="heart"><i class="fa-sharp fa-regular fa-heart"></i></div>
-                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    <div class="heart"><i class="fa-sharp fa-regular fa-heart" title="Add to Favorite"></i></div>
+                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical" title="More Options"></i></div>
                 </li>
                 <li class="duration"><span>3:44</span></li>
             </ul>
@@ -94,7 +141,7 @@
                     <div class="track-wrapper">
                         <div class="track-image">
                             <img
-                                src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/music-songs-youtube-thumbnails-design-template-f0fcb6a767bf70426fb7a5109709c4fe.jpg?ts=1600929244">
+                                src="./Assets/img/18.jpg">
                         </div>
                         <div class="track-name">Nach Meri Rani</div>
                     </div>
@@ -102,8 +149,8 @@
                 <li class="artist"><span>Guru Randhawa</span></li>
                 <li class="album">
                     <div class="album-name">Nach Meri Rani</div>
-                    <div class="heart"><i class="fa-sharp fa-regular fa-heart"></i></div>
-                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    <div class="heart"><i class="fa-sharp fa-regular fa-heart" title="Favorite"></i></div>
+                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical" title="More Options"></i></div>
                 </li>
                 <li class="duration"><span>3:43</span></li>
             </ul>
@@ -116,7 +163,7 @@
                     <div class="track-wrapper">
                         <div class="track-image">
                             <img
-                                src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/music-songs-youtube-thumbnails-design-template-f0fcb6a767bf70426fb7a5109709c4fe.jpg?ts=1600929244">
+                                src="./Assets/img/18.jpg">
                         </div>
                         <div class="track-name">Chak Chak</div>
                     </div>
@@ -124,8 +171,8 @@
                 <li class="artist"><span>Shreya Ghoshal</span></li>
                 <li class="album">
                     <div class="album-name">Atrangi Re</div>
-                    <div class="heart"><i class="fa-sharp fa-regular fa-heart"></i></div>
-                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    <div class="heart"><i class="fa-sharp fa-regular fa-heart" title="Favorite"></i></div>
+                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical" title="More Options"></i></div>
                 </li>
                 <li class="duration"><span>3:31</span></li>
             </ul>
@@ -137,7 +184,7 @@
                 <li class="track">
                     <div class="track-wrapper">
                         <div class="track-image"><img
-                                src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/music-songs-youtube-thumbnails-design-template-f0fcb6a767bf70426fb7a5109709c4fe.jpg?ts=1600929244">
+                                src="./Assets/img/18.jpg">
                         </div>
                         <div class="track-name">Chak Chak</div>
                     </div>
@@ -145,8 +192,8 @@
                 <li class="artist"><span>Shreya Ghoshal</span></li>
                 <li class="album">
                     <div class="album-name">Atrangi Re</div>
-                    <div class="heart"><i class="fa-sharp fa-regular fa-heart"></i></div>
-                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    <div class="heart"><i class="fa-sharp fa-regular fa-heart" title="Favorite"></i></div>
+                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical" title="More Options"></i></div>
                 </li>
                 <li class="duration"><span>3:31</span></li>
             </ul>
@@ -158,7 +205,7 @@
                 <li class="track">
                     <div class="track-wrapper">
                         <div class="track-image"><img
-                                src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/music-songs-youtube-thumbnails-design-template-f0fcb6a767bf70426fb7a5109709c4fe.jpg?ts=1600929244">
+                                src="./Assets/img/18.jpg">
                         </div>
                         <div class="track-name">Shrivali</div>
                     </div>
@@ -166,8 +213,8 @@
                 <li class="artist"><span>Javed Ali</span></li>
                 <li class="album">
                     <div class="album-name">Pushpa the rise </div>
-                    <div class="heart"><i class="fa-sharp fa-regular fa-heart"></i></div>
-                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    <div class="heart"><i class="fa-sharp fa-regular fa-heart" title="Favorite"></i></div>
+                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical" title="More Options"></i></div>
                 </li>
                 <li class="duration"><span>3:44</span></li>
             </ul>
@@ -179,7 +226,7 @@
                 <li class="track">
                     <div class="track-wrapper">
                         <div class="track-image"><img
-                                src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/music-songs-youtube-thumbnails-design-template-f0fcb6a767bf70426fb7a5109709c4fe.jpg?ts=1600929244">
+                                src="./Assets/img/18.jpg">
                         </div>
                         <div class="track-name">Nach Meri Rani</div>
                     </div>
@@ -187,8 +234,8 @@
                 <li class="artist"><span>Guru Randhawa</span></li>
                 <li class="album">
                     <div class="album-name">Nach Meri Rani</div>
-                    <div class="heart"><i class="fa-sharp fa-regular fa-heart"></i></div>
-                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    <div class="heart"><i class="fa-sharp fa-regular fa-heart" title="Favorite"></i></div>
+                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical" title="More Options"></i></div>
                 </li>
                 <li class="duration"><span>3:43</span></li>
             </ul>
@@ -201,7 +248,7 @@
                     <div class="track-wrapper">
                         <div class="track-image">
                             <img
-                                src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/music-songs-youtube-thumbnails-design-template-f0fcb6a767bf70426fb7a5109709c4fe.jpg?ts=1600929244">
+                                src="./Assets/img/18.jpg">
                         </div>
                         <div class="track-name">Chak Chak</div>
                     </div>
@@ -209,8 +256,8 @@
                 <li class="artist"><span>Shreya Ghoshal</span></li>
                 <li class="album">
                     <div class="album-name">Atrangi Re</div>
-                    <div class="heart"><i class="fa-sharp fa-regular fa-heart"></i></div>
-                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    <div class="heart"><i class="fa-sharp fa-regular fa-heart" title="Favorite"></i></div>
+                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical" title="More Options"></i></div>
                 </li>
                 <li class="duration"><span>3:31</span></li>
             </ul>
@@ -223,7 +270,7 @@
                     <div class="track-wrapper">
                         <div class="track-image">
                             <img
-                                src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/music-songs-youtube-thumbnails-design-template-f0fcb6a767bf70426fb7a5109709c4fe.jpg?ts=1600929244">
+                                src="./Assets/img/18.jpg">
                         </div>
                         <div class="track-name">Chak Chak</div>
                     </div>
@@ -231,13 +278,77 @@
                 <li class="artist"><span>Shreya Ghoshal</span></li>
                 <li class="album">
                     <div class="album-name">Atrangi Re</div>
-                    <div class="heart"><i class="fa-sharp fa-regular fa-heart"></i></div>
-                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    <div class="heart"><i class="fa-sharp fa-regular fa-heart" title="Favorite"></i></div>
+                    <div class="menu"><i class="fa-solid fa-ellipsis-vertical" title="More Options"></i></div>
                 </li>
                 <li class="duration"><span>3:31</span></li>
             </ul>
         </section>
-    </main>
+    </div> 
+   </main>
+
+    <section class="footer">
+        <div id="media-controls">
+          <div class="master-play">
+           <div class="song-play">
+            <div class="wave">
+              <div class="wave1"></div>
+              <div class="wave1"></div>
+              <div class="wave1"></div>
+            </div>
+            <img src="Assets/img/9.jpg" alt="" id="thumbnail-masterPlay">
+            <h5 id="title">
+              Dilbar Dilbar
+              <div class="subtitle">
+                Artist name
+              </div>
+            </h5>
+          </div>
+    
+            <div class="audio-control1"> 
+              <div class="masterplay-icon">            
+                <i class="fa-solid fa-shuffle" title="Enable shuffle"></i>
+                <i class="fa-solid fa-backward-step" title="Previous"></i>
+                <i class="fa-solid fa-circle-pause" title="Pause"></i>
+                <i class="fa-solid fa-forward-step" title="Next"></i>
+                <i class="fa-solid fa-repeat" title="Enable Repeat"></i>
+                <i class="fa-solid fa-cloud-arrow-down" title="Download"></i>      
+              </div>
+    
+              <div class="audio-icon"> 
+                <span id="current-start">2:00</span>
+                <div class="seek-bar">
+                  <input type="range" id="seek" min="0" max="100">
+                  <div class="seek-bar2" id="seek-bar2"> </div>
+                  <div class="dot"></div>
+                </div>
+                <span id="current-end">2:30</span>
+              </div>
+            </div>
+    
+            <div class="audio-control2">
+            <div class="slider-up">
+              <i class="fa-solid fa-sliders" title="Equalizer"></i>
+            </div>
+            <div id="connectDevice-icon"> 
+             <img src="https://cdn-icons-png.flaticon.com/512/8736/8736763.png"  alt="" title="Connect Device">
+            </div>
+            <div class="vol">
+                <i class="fa-solid fa-volume-low" id="vol-icon" title="Volume"></i>
+              <input type="range" id="seek" min="0" max="100" id="vol">
+              <div class="vol-bar"> </div>
+              <div class="dot" id="vol-dot"></div>
+            </div>
+            <div id="audio-icon"> 
+             <img src="https://cdn-icons-png.flaticon.com/512/4211/4211451.png"  alt="" title="Queue"> 
+            </div>
+            <div class="maximize">
+              <i class="fa-sharp fa-solid fa-up-right-and-down-left-from-center" title="Maximize"></i>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
 </body>
 
 </html>

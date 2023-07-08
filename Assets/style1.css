@@ -1,8 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --text-color:#e51d53;
+  }
+  #wrapper{
+    background-color: #000;
+    padding: 1.3rem;
+    scroll-behavior: smooth;
+  }
+  
+  /* Scroll bar CSS start ---------*/
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 1.3rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #444; 
+    border-radius: 10px;
+  } 
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:var(--text-color); 
+    border-radius: 10px;
+  } 
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #444; 
+  }  
+  /* Scroll bar CSS start ---------*/
+  
+  
+  header {
+    position: sticky;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+  }
+  
+   /* Nav bar CSS start from here */
+  #nav1,
+  #nav2 {
+    display: flex;
+    background-color: #333;
+  }
+  
+  #nav1 {
+    height: 5rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color:#000;
+    justify-content: flex-start;
+  }
+  
+  #left-nav {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  /* Website logo CSS */
+  .header-logo{
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  /* Website Name CSS  */
+  .title a{
+    text-decoration: none;
+  }
+  .title h1 {
+    margin: 0;
+    color: var(--text-color);
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    animation: glow 1.4s ease-in-out infinite alternate;
+    text-align: center;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 1.3rem  var(--text-color);
+    }
+    to {
+      text-shadow: 0 0 2.2rem #d72051, 0 0 10px var(--text-color);
+    }
+  }
+  
+  #right-nav {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 6.25rem;
+    width: 70%;
+    height: 100%;
+    padding-top: 1.25rem;
+  }
+  /* Search bar CSS start from here */
+  #search-bar {
+    width: 60%;
+  }
+  
+  .search-icon {
+    top: 13px;
+    left: 8px;
+    position: absolute;
+  }
+  
+  input.search-input {
+    width: 85%;
+    height: 2.5rem;
+    background-color: #444;
+    border-radius: 1.25rem;
+    border: none;
+    outline: none;
+    padding-left: 1.8rem;
+  }
+  .microphone{
+    position: absolute;
+    color: var(--text-color);
+    top: 10%;
+    left: 80%;
+  }
+  #right-nav>div {
+    position: relative;
+  }
+  .user{
+    width: 35%;
+    margin-right: 2.8rem;
+    display: flex;
+    justify-content: flex-end;
+  
+  }
+  .user img{
+   height: 2.5rem;
+   width: 2.5rem;
+   border-radius: 50%;
+  
+  }
+  .user i{
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #fff;
+  }
+  
+  ul.nav-menu li {
+    list-style: none;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: var(--text-color);
+    text-align: center;
+    padding: .8rem 1rem;
+    text-underline-offset: 1.25rem;
+    text-decoration: none;
+  }
+  #nav2 .active{
+    background-color: #000;
+  }
+  
+  li a:hover {
+    background-color: #111;
+    text-decoration: underline var(--text-color);
+
+  }
+/* Header part CSS End here ----------------------------- */
 
 
 .wrap{
@@ -28,6 +205,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+    align-items: center;
     overflow: hidden;
     position: relative;
 }
@@ -40,19 +220,28 @@
     
 }
 .info-sec .artist-name{
-    color:#000;
+    color:var(--text-color);
     order: 0;
     margin-bottom: 1rem;
     font-size: 2rem;
     font-family: proximanova-bold-webfont,Arial,sans-serif;
     line-height: 1.5;
 }
-.info-sec .sub-info p{
+.info-sec .sub-info div{
     color: #8e8e93!important;
     margin-bottom: .9rem;
     order: 0;
+    border-right: 2px solid;
+    padding:0px 8px;
     font-size: .8rem;
     align-items: flex-start;
+}
+.sub-info div:last-child{
+    border-right:none ;
+}
+
+.sub-info {
+    display: flex;
 }
 .info-sec .sort-bio {
     display: flex;
@@ -60,8 +249,8 @@
     flex-direction: column;
 }
 .info-sec .sort-bio p{
-    color: #000000;
-    font-size: 14px;
+    color: #bdbdbd;
+    font-size: 1rem;
     line-height: 1.6;
     letter-spacing: .1rem;
     overflow: hidden;
@@ -76,7 +265,7 @@
     align-items: center;
     font-family: proximanova-semibold-webfont,Arial,sans-serif;
     font-size: 14px;
-    color: #e72c30;
+    color: var(--text-color);
     margin-top: 10px;
     cursor: pointer;
 }
@@ -98,9 +287,18 @@
     font-family: proximanova-semibold-webfont,Arial,sans-serif;
     text-transform: capitalize; 
 }
+.bttn-solid{
+    background-color: var(--text-color);
+}
+.bttn-solid:hover{
+color: #fff;
+background: linear-gradient(-45deg,#e72c30, #132450, #FF3D77,#e51d53);
+background-size: 600%;
+animation : anime 8s linear infinite;
+}
 
 .btn-solid{
-    color: rgba(255,255,255,0.9);
+    color: #ffffff;
      background: linear-gradient(-45deg,#e72c30, #132450, #FF3D77,#e51d53);
      background-size: 600%;
      animation : anime 10s linear infinite;
@@ -122,17 +320,24 @@ button{
     margin-right: 10px;
 }
 
-ul {
+#playlist ul {
     position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    color: #bdbdbd;
+    cursor: pointer;
     list-style-type: none;
-    background-color: #edecec66;
     align-items: center;
-    padding: 5px;
-    margin: 0px;
-    border-bottom: 1px solid;
+    padding: .3rem;
+    /* margin: .1rem 0; */
+}
+
+#playlist ul:hover{
+    background-color: var(--text-color) ;    
+     /* background-color: #bdbdbd; */
+     transition: all 0.8s linear 0s;
+     color:#fff;
 }
 
 .serial-number{
@@ -145,7 +350,7 @@ ul {
     width: 15%;
 }
 
-section{
+#playlist{
     display: flex;
     width: 70%;
     position: relative;
@@ -156,7 +361,7 @@ section{
 }
 .s-No{
     width: 100%;
-    text-align: right;
+    text-align: center;
 }
 .track-wrapper{
 width: 100%;
@@ -182,18 +387,9 @@ align-items: center;
       span.heart, span.dot {
         display: flex;
         justify-content: center;
-        align-items: center; /* Added property for horizontal centering */
       }
-      
-      span.heart i {
-        margin-left: 35%;
-      }
-      
-      span.dot {
-        margin-left: 65%;
-      }
-
-.album{
+    
+    .album{
     display: flex;
    
 }
@@ -206,10 +402,304 @@ align-items: center;
 .heart{
     width: 25%;
     float: right;
-    
+       
 }
+.heart:hover{
+    -webkit-animation: nextarrow 1s infinite;
+    animation: nextarrow 1s infinite;
+    color: red;
+}
+    @keyframes nextarrow{
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+    
+
 
 .menu{
   width: 25%;
   float: right;
 }
+
+/* Media control CSS start from here --------------------------------------------------------------------*/
+.footer #audio-icon img{
+    width: 1.25rem;
+    height: 1.25rem;
+    filter: brightness(0) invert(1);
+  }
+  .footer #connectDevice-icon img{
+    width: 1.25rem;
+    height: 1.25rem;
+    filter: brightness(0) invert(1);
+  }
+    #media-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;   
+    background-color: #333;
+    height: 5rem;
+  }
+  
+  .slider-up i{
+    color: #fff;
+  }
+  .maximize i{
+    color: #fff;
+  }
+  .footer .master-play{
+  display: flex  ;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;  
+  }
+  
+  .footer .master-play .wave{
+    width: 1.87rem;
+    height: 1.87rem;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+  }
+  
+  .footer .master-play .wave .wave1{
+    width: 4px;
+    height: 10px;
+    background: var(--text-color);
+    margin-right: 3px;
+    border-radius: 10px 10px 0px 0px;
+    animation: wave .3s linear infinite;
+  }
+  .footer .master-play .wave .wave1:nth-child(2){
+    height: 7px;
+    margin-right: 3.5;
+    animation-delay: .4s;
+  }
+  
+  .footer .master-play .wave .wave1:nth-child(3){
+    height: 8px;
+    animation-delay: .8s;
+  }
+  
+  @keyframes wave{
+    0%{
+        height: 10px;
+    }
+    50%{
+        height: 15px;
+    }
+    100%{
+        height: 10px;
+    }
+  }
+  
+  .footer .master-play img{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 6px;
+  }
+  .footer .master-play h5{
+    width: 8.12rem;
+    margin-left: 10px;
+    color:#ffff;
+    line-height: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+  .footer .master-play h5 .subtitle{
+    font-size: 11px;
+    color: rgb(200, 202, 192);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .footer .master-play .masterplay-icon{
+    font-size: 1rem;
+    color:#fff;
+    margin: 0 1.25rem 0 2.5rem;
+    outline: none;
+    display: flex;
+    align-items: center;
+  }
+  .masterplay-icon .fa-solid {
+    margin: 10px;
+    padding: 5px;
+    font-size: 1rem;
+  }
+  
+  .footer .master-play .masterplay-icon .fa-solid{
+    cursor: pointer;
+    outline: none;
+  }
+  
+  
+  .footer .master-play .masterplay-icon .fa-circle-pause{
+   margin: 0px 5px;
+   color: var(--text-color);
+   font-size: 2rem;
+   
+  }
+    .footer .master-play span{
+      color:#fff;
+      width: 2rem;
+      font-size: .8rem;
+      font-weight: 400;
+    }
+  
+  .footer .master-play #current-start{
+    margin: 0 0 0 1.87rem;
+  }
+  .footer .master-play .seek-bar{
+    position: relative;
+    width:43%;
+    height: 2px;
+    border-radius: 2px;
+    background:#c9c9d2c4;
+    margin: 0 .9rem 0 .6rem;
+  }
+  .footer .master-play .seek-bar .seek-bar2{
+    position: absolute;
+    background: var(--text-color);
+    width: 70%;
+    border-radius:2px ;
+    height: 100%;
+    top: 0px;
+    transition: 1s linear;
+  }
+  .footer .master-play .seek-bar .dot{
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: var(--text-color);
+  border-radius: 50%;
+  left: 70%;
+  top: -1.5px;  
+  transition: 1s linear;
+  }
+  .footer .master-play .seek-bar .dot::before{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    top: -6px;
+    left:-7px;
+    box-shadow: inset 0px 0px 3px var(--text-color);
+  }
+  .footer .master-play .seek-bar input{
+    position:absolute;
+    width: 100%;
+    top:-7px;
+    left: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+  }
+  .footer .master-play .vol{
+    position: relative;
+    width: 6.25rem;
+    height: 2px;
+    border-radius: 2px;
+    background: #c9c9d2c4;
+    margin-left: 3.12rem;
+  }
+  
+  .footer .master-play .vol .fa-solid{
+    position: absolute;
+    color: #fff;
+    font-size: 1.25rem;
+    top:-10px;
+    left: -1.87rem;
+  }
+  .footer .master-play .vol input{
+    position: absolute;
+    width: 100%;
+    top: -10px;
+    left: 0;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0;
+  }
+  .footer .master-play .vol .vol-bar{
+    position: absolute;
+    background: var(--text-color);
+    width: 40%;
+    border-radius: 2px;
+    height: 100%;
+    top:0px;
+    transition: 1s linear;
+  }
+  
+  .footer .master-play .vol .dot{
+    position: absolute;
+  width: 5px;
+  height: 5px;
+  background:var(--text-color);
+  border-radius: 50%;
+  left: 40%;
+  top: -1.5px;  
+  transition: 1s linear;  
+  }
+  
+  .footer .master-play .vol .dot::before{
+    content: '';
+    position: absolute;
+    width: .9rem;
+    height: .9rem;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    top: -6px;
+    left:-7px;
+    box-shadow: inset 0px 0px 3px var(--text-color);
+  }
+  .song-play{
+    width: 10%;
+    display:flex;
+    align-items: center;
+  }
+  .footer .audio-control1{
+    width: 100%; 
+    display: flex;
+    margin-right: -10%;
+     flex-direction: column;
+      align-items: center;
+  }
+  .footer .audio-icon{
+    display: flex; 
+    width: 100%; 
+    align-items: center;
+     justify-content: center;
+  }
+  
+  .audio-control2{
+    width: 30%; 
+    display: flex;
+     justify-content: space-around;
+      align-items: center;
+  }
+  .audio-control2 img{
+    margin-left:10px;
+  }
+  div#connectDevice-icon {
+    margin-left: 10px;
+  }
+  .slider-up {
+    margin-left: 20%;
+  }
+  
+  /* Media control styling end here */

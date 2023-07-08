@@ -1,94 +1,86 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-  }
-  
-  .container {
-    width: 100%;
-    padding: 0.8rem;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-  }
-  
-  #playlist {
-    width: 60%;
-    display: flex;
-   flex-direction: row;
-  
-  }
-  
-  #playlist .heading {
-    width: 25%;
-    background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px;
-  }
-  /* .heading  .track{
-    width: 20%!important;
-  }
-  #album{
-    width: 30%!important;
-  }
-  .serial-number{
-    width: 5%!important;
-  }
-  .song-duration{
-    width: 8%!important;
-  }
-  .download-icon{
-    width: 7%!important;
-  } */
-  #playlist div li {
-    height: 4rem;
-    border-bottom:2px solid #000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 70%;
-  }
+*{
+  list-style: none;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
 
-  img{
-    width: 45px;
-    height: 45px;
-    border-radius: 4px;
-  }
-  .track-wrapper{
-    width: 100%;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    }
-    .track-image{
-        height: 100%;
-        display: inline-block;
-        width: 100%;
-    }
 
-    .album-div div {
-        display: flex;
-        width: 100%;
-        justify-content: flex-end;
-    }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  .album-div {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 4px;
-  }
-  
-  .album-div div i {
-    margin-right: 4px;
-  }
-  
-  .title {
-    font-weight: bold;
-  }
+.heading {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+.sr-no,
+.title,
+.artist,
+.album,
+.duration,
+.download {
+  flex: 1;
+  text-align: center;
+}
+
+.track-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.track-image {
+  margin-right: 10px;
+}
+.track-image img{
+  width: 40px;
+  height: 40px;
+}
+
+.track-name span {
+  font-weight: bold;
+}
+
+.album-div {
+  display: flex;
+  align-items: center;
+}
+
+.album-div div:first-child {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fa-sharp,
+.fa-regular,
+.fa-solid {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.fa-ellipsis-vertical {
+  color: gray;
+}
+
+.fa-heart {
+  color: red;
+}
+
+/* Additional styles to customize as per your requirements */
