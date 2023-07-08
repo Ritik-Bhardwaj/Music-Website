@@ -15,14 +15,14 @@ body {
 
 #wrapper{
   background-color: #000;
-  padding: 20px;
+  padding: 1.3rem;
   scroll-behavior: smooth;
 }
 
 /* Scroll bar CSS start ---------*/
 ::-webkit-scrollbar {
   width: 8px;
-  height: 20px;
+  height: 1.3rem;
 }
 
 /* Track */
@@ -83,6 +83,9 @@ header {
   margin-right: 10px;
 }
 /* Website Name CSS  */
+.title a{
+  text-decoration: none;
+}
 .title h1 {
   margin: 0;
   color: var(--text-color);
@@ -96,20 +99,20 @@ header {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 20px var(--text-color);
+    text-shadow: 0 0 1.3rem  var(--text-color);
   }
   to {
-    text-shadow: 0 0 35px #d72051, 0 0 10px var(--text-color);
+    text-shadow: 0 0 2.2rem #d72051, 0 0 10px var(--text-color);
   }
 }
 
 #right-nav {
   display: flex;
   justify-content: flex-start;
-  padding-left: 100px;
+  padding-left: 6.25rem;
   width: 70%;
   height: 100%;
-  padding-top: 20px;
+  padding-top: 1.25rem;
 }
 /* Search bar CSS start from here */
 #search-bar {
@@ -124,12 +127,12 @@ header {
 
 input.search-input {
   width: 85%;
-  height: 40px;
+  height: 2.5rem;
   background-color: #444;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   border: none;
   outline: none;
-  padding-left: 30px;
+  padding-left: 1.8rem;
 }
 .microphone{
   position: absolute;
@@ -142,7 +145,7 @@ input.search-input {
 }
 .user{
   width: 35%;
-  margin-right: 45px;
+  margin-right: 2.8rem;
   display: flex;
   justify-content: flex-end;
 
@@ -171,8 +174,8 @@ li a {
   display: block;
   color: var(--text-color);
   text-align: center;
-  padding: 14px 16px;
-  text-underline-offset: 20px;
+  padding: .8rem 1rem;
+  text-underline-offset: 1.25rem;
   text-decoration: none;
 }
 #nav2 .active{
@@ -190,18 +193,18 @@ li a:hover {
   display: inline-block;
   box-shadow: 4px 0px 13px 9px #132450;
 background-color: #0b142d;
-margin-bottom: 70px;
+margin-bottom: 4.4rem;
 }
 
  
 /*  Carousel CSS start from here ----------------------------------------------------------------------- */
 /* Slider CSS */
 #slider {
-  height: 425px;
+  height: 26.5rem;
   margin: 0;
   display: grid;
-  grid-template-rows: 300px 0px;
-  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  grid-template-rows: 18.75rem 0;
+  grid-template-columns: 1fr 1.87rem 1.87rem 1.87rem 1.87rem 1.87rem 1fr;
   align-content: space-between;
   justify-content: center;
   align-items: center;
@@ -212,7 +215,7 @@ margin-bottom: 70px;
 #arrow {
   width: 73%;
   display: flex;
-  height: 400px;
+  height: 25rem;
   z-index: 1;
   justify-content: space-between;
   align-items: center;
@@ -243,11 +246,11 @@ div#left-arrow i {
 }
 
 div#left-arrow i:hover {
-  color: #bc0f0f;
+  color: var(--text-color);
 }
 
 #right-arrow i:hover {
-  color: #bc0f0f;
+  color: var(--text-color);
 }
 /* Arrow CSS end */
 
@@ -255,13 +258,13 @@ main#carousel {
   grid-row: 1 / 2;
   grid-column: 1 / 8;
   width: 100vw;
-  height: 500px;
+  height: 31.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   transform-style: preserve-3d;
-  perspective: 600px;
+  perspective: 37.5rem;
   --items: 5;
   --middle: 3;
   --position: 1;
@@ -270,8 +273,8 @@ main#carousel {
 
 div.item {
   position: absolute;
-  width: 500px;
-  height: 200px;
+  width: 31.25rem;
+  height: 12.5rem;
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
   transition: all 0.25s linear;
@@ -352,9 +355,66 @@ input:nth-of-type(5):checked~main#carousel {
 
  
  /* Songs cards slider section CSS Start from here ----------------------------------------------- */
-.songs-section {
-  margin: 50px 0px;
+.songs-sections {
+  margin: 3.75rem 0;
 }
+
+/* Arrow Styling in Song Section start here */
+section.songs-sections {
+  position: relative;
+}
+section.songs-sections #arrow-left, #arrow-right {
+ cursor: pointer;
+ position: absolute;
+  /* display: none; */
+  font-size: 2.5rem;
+  color: white;
+  opacity: 0;
+}
+section.songs-sections:hover #arrow-left{
+  color: #fff;
+  opacity: .5;
+  z-index: 2;
+  opacity: 1;
+  cursor: pointer;
+  font-size: 2.5rem;
+
+  /* border-radius: 50%; 
+  box-shadow: 3px 5px 12px 27px rgb(182 49 49 / 95%); 
+  height: 40px; 
+  width: 40px; */
+}
+
+section.songs-sections #arrow-left:hover{
+  color: var(--text-color);
+
+}
+section.songs-sections:hover #arrow-right{
+  color: #fff;
+  opacity: 0.5;
+  z-index: 2;
+  opacity: 1;
+  cursor: pointer;
+  /* border-radius: 50%; */
+  /* box-shadow: 3px 5px 12px 27px rgb(182 49 49 / 95%); */
+  font-size: 2.5rem;
+  /* height: 40px; */
+  /* width: 40px; */
+}
+section.songs-sections #arrow-right:hover{
+  color: var(--text-color);
+ }
+
+div#arrow-left {
+  top: 40%;
+}
+
+div#arrow-right {
+  left: 97%;top: 40%;
+}
+/* Arrow Styling in Song Section end here */
+
+
 
 .section-heading {
   margin-top: 1.3rem;
@@ -374,7 +434,7 @@ input:nth-of-type(5):checked~main#carousel {
 .show-all{
   color: #ffffff;
   font-size: .8rem;
-  margin: 25px 12px 0px 0px;
+  margin: 1.5rem .7rem 0 0;
 }
 .show-all a {
   color: #fff;
@@ -388,9 +448,10 @@ input:nth-of-type(5):checked~main#carousel {
 .songs-contnt {
   /* background-color: aqua; */
   display: flex;
-  padding: 0px 16px 16px 16px;
+  padding: 0px 1rem 1rem 1rem;
   flex-direction: row;
   overflow: hidden;
+  margin-top: .8rem;
 }
 
 .song-card {
@@ -400,10 +461,9 @@ input:nth-of-type(5):checked~main#carousel {
   align-items: center;
   justify-content:space-evenly;
   width: 20%;
-  padding: .8rem;
+  padding: 0 .8rem;
   flex-direction: column;
   margin-right: 10px;
-  margin-top: 10px;
   
 }
 .song-card:hover{
@@ -419,8 +479,8 @@ input:nth-of-type(5):checked~main#carousel {
 
 .img-contnt {
   position: relative;
-  height: 160px;
-  width: 160px;
+  height: 10rem;
+  width: 10rem;
   border-radius: 6px;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -468,7 +528,7 @@ opacity: 1;
     width: 85%;
      margin-top: 6px;
     font-family: proximanova-semibold-webfont,Arial,sans-serif;
-    font-size: 14px;
+    font-size: .8rem;
     line-height: 2;
     text-transform: capitalize;
     overflow: hidden;
@@ -503,8 +563,8 @@ display: none;
 }
 
 .playlist-heading h1 {
-  font-size: 24px;
-  margin: 15px 0px 0px 20px;
+  font-size: 1.5rem;
+  margin: .9rem 0 0 1.25rem;
   font-weight: 500;
   font-family: proximanova-bold-webfont,Arial,sans-serif;
   text-decoration: solid;
@@ -516,7 +576,7 @@ display: none;
 }
 
 #side-queue .play-list h4 {
-  font-size: 14px;
+  font-size: .8rem;
   font-weight: 900;
   color: #a9a9ad;
   cursor: pointer;
@@ -537,14 +597,14 @@ display: none;
 }
 
 .fa-music {
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 /* Side Queue song list CSS Start*/
 
 .song-list {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 .songItem{
   display: flex;
@@ -581,21 +641,21 @@ display: none;
  opacity: 0;
 }
 .song-list li span {
-  font-size: 14px;
+  font-size: .8rem;
   font-weight: 600;
   color: #8b8d91;
 }
 
 .song-list li img {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   margin-left: 25px;
 }
 
 .song-list li h5 {
   font-size: 11px;
-  margin-left: 15px;
-  width: 170px;
+  margin-left:.9rem;
+  width: 10.6rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -608,7 +668,7 @@ display: none;
 
 .song-list li h5 i{
  position: absolute;
- right: 25px; 
+ right: 1.5rem; 
 }
 /* Side Queue Song list CSS end */
 /* ----------------------------------------------------------------------------------------- */
@@ -629,8 +689,8 @@ aside .master-play{
   aside .master-play .wave{
     position: absolute;
     bottom: 5px;
-    width: 30px;
-    height: 30px;
+    width: 1.87rem;
+    height: 1.87rem;
     padding-bottom: 5px;
     display: flex;
     align-items: flex-end;
@@ -677,13 +737,15 @@ aside .master-play{
 
 /* Media control CSS start from here --------------------------------------------------------------------*/
 .footer #audio-icon img{
-  width: 16px;
-  height: 16px;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 6px;
   filter: brightness(0) invert(1);
 }
 .footer #connectDevice-icon img{
-  width: 16px;
-  height: 16px;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 6px;
   filter: brightness(0) invert(1);
 }
   #media-controls{
@@ -708,12 +770,12 @@ display: flex  ;
 width: 100%;
 justify-content: space-between;
 align-items: center;
-padding: 0px 20px;  
+padding: 0 1.25rem;  
 }
 
 .footer .master-play .wave{
-  width: 30px;
-  height: 30px;
+  width: 1.87rem;
+  height: 1.87rem;
   padding-bottom: 5px;
   display: flex;
   align-items: flex-end;
@@ -752,15 +814,15 @@ padding: 0px 20px;
 }
 
 .footer .master-play img{
-  width: 45px;
-  height: 45px;
+  width: 2.8rem;
+  height: 2.8rem;
   border-radius: 6px;
 }
 .footer .master-play h5{
-  width: 130px;
+  width: 8.12rem;
   margin-left: 10px;
   color:#ffff;
-  line-height: 17px;
+  line-height: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -775,9 +837,9 @@ padding: 0px 20px;
 }
 
 .footer .master-play .masterplay-icon{
-  font-size: 16px;
+  font-size: 1rem;
   color:#fff;
-  margin: 0px 20px 0px 40px;
+  margin: 0 1.25rem 0 2.5rem;
   outline: none;
   display: flex;
   align-items: center;
@@ -785,7 +847,7 @@ padding: 0px 20px;
 .masterplay-icon .fa-solid {
   margin: 10px;
   padding: 5px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .footer .master-play .masterplay-icon .fa-solid{
@@ -802,13 +864,13 @@ padding: 0px 20px;
 }
   .footer .master-play span{
     color:#fff;
-    width: 32px;
-    font-size: 14px;
+    width: 2rem;
+    font-size: .8rem;
     font-weight: 400;
   }
 
 .footer .master-play #current-start{
-  margin: 0px 0px 0px 30px;
+  margin: 0 0 0 1.87rem;
 }
 .footer .master-play .seek-bar{
   position: relative;
@@ -816,7 +878,7 @@ padding: 0px 20px;
   height: 2px;
   border-radius: 2px;
   background:#c9c9d2c4;
-  margin: 0px 15px 0px 10px;
+  margin: 0 .9rem 0 .6rem;
 }
 .footer .master-play .seek-bar .seek-bar2{
   position: absolute;
@@ -840,8 +902,8 @@ transition: 1s linear;
 .footer .master-play .seek-bar .dot::before{
   content: '';
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 1rem;
+  height: 1rem;
   border: 1px solid var(--text-color);
   border-radius: 50%;
   top: -6px;
@@ -859,19 +921,19 @@ transition: 1s linear;
 }
 .footer .master-play .vol{
   position: relative;
-  width: 100px;
+  width: 6.25rem;
   height: 2px;
   border-radius: 2px;
   background: #c9c9d2c4;
-  margin-left: 50px;
+  margin-left: 3.12rem;
 }
 
 .footer .master-play .vol .fa-solid{
   position: absolute;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.25rem;
   top:-10px;
-  left: -30px;
+  left: -1.87rem;
 }
 .footer .master-play .vol input{
   position: absolute;
@@ -906,8 +968,8 @@ transition: 1s linear;
 .footer .master-play .vol .dot::before{
   content: '';
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: .9rem;
+  height: .9rem;
   border: 1px solid var(--text-color);
   border-radius: 50%;
   top: -6px;
