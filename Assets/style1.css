@@ -5,7 +5,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+  font-family: 'Poppins', 'sans-serif';
+  font-weight: 800;
+}
 :root{
     --text-color:#e51d53;
   }
@@ -167,7 +170,7 @@
     color: var(--text-color);
     text-align: center;
     padding: .8rem 1rem;
-    text-underline-offset: 1.25rem;
+    text-underline-offset: .7rem;
     text-decoration: none;
   }
   #nav2 .active{
@@ -180,8 +183,18 @@
 
   }
 /* Header part CSS End here ----------------------------- */
+/* Main Section start from here----------------------------------------- */
 
+#content-section {
+  width: 74%;
+  height: auto;
+  display: inline-block;
+  box-shadow: 4px 0px 13px 9px #132450;
+background-color: #0b142d;
+margin-bottom: 4.4rem;
+}
 
+/* CSS of Artist section start from here-------------------- */
 .wrap{
     display: flex;
     flex-direction: column;
@@ -189,13 +202,21 @@
 .info-sec{
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
     flex-direction: row;
-    margin-bottom: 40px;
+    margin: .7rem;
     width: 70vw;
+  box-shadow: 0px 0px 12px 3px #8e8e93;
+
 }
+
 .bg-image img{
     height: 100%;
     width: 100%;
+}
+.bg-image:hover {
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
 }
 .info-sec .bg-image{
   
@@ -220,10 +241,11 @@
     
 }
 .info-sec .artist-name{
-    color:var(--text-color);
+    /* color:var(--text-color); */
+    color: #e9e9e9ec;
     order: 0;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: proximanova-bold-webfont,Arial,sans-serif;
     line-height: 1.5;
 }
@@ -326,18 +348,19 @@ button{
     justify-content: space-between;
     width: 100%;
     color: #bdbdbd;
+    border-bottom: 1px solid rgb(201 201 210 / 33%);
     cursor: pointer;
     list-style-type: none;
     align-items: center;
     padding: .3rem;
-    /* margin: .1rem 0; */
+
 }
 
 #playlist ul:hover{
-    background-color: var(--text-color) ;    
-     /* background-color: #bdbdbd; */
+     color: var(--text-color);
+     background-color: #413f3f;
      transition: all 0.8s linear 0s;
-     color:#fff;
+     /* color:#fff; */
 }
 
 .serial-number{
@@ -345,14 +368,16 @@ button{
 }
 .track, .artist, .album{
  width: 25%;
+ text-align: start;
 }
 .duration{
     width: 15%;
+    text-align: center;
 }
 
 #playlist{
     display: flex;
-    width: 70%;
+    width: 70vw;
     position: relative;
     left: 1.25rem;
     flex-direction: column;
@@ -375,14 +400,16 @@ align-items: center;
 }
 .track-image img{
     width: 2.8rem;
+    border-radius: 3px;
     height: 2.8rem;
     display: inline-block;
 }
 
     #header li{
-        font-size: 1.25rem;
+        margin-top: 1.7rem;
+        font-size: .9rem;
         font-weight: 700;
-    }
+        }
 
       span.heart, span.dot {
         display: flex;
@@ -664,7 +691,7 @@ align-items: center;
     border: 1px solid var(--text-color);
     border-radius: 50%;
     top: -6px;
-    left:-7px;
+    left:-6px;
     box-shadow: inset 0px 0px 3px var(--text-color);
   }
   .song-play{

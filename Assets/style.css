@@ -211,7 +211,7 @@ li a {
   color: var(--text-color);
   text-align: center;
   padding: .8rem 1rem;
-  text-underline-offset: 1.25rem;
+  text-underline-offset: .7rem;
   text-decoration: none;
 }
 #nav2 .active{
@@ -222,6 +222,10 @@ li a:hover {
   background-color: #111;
   text-decoration: underline;
 }
+/* Header part CSS End here ----------------------------- */
+
+
+/* Main Section start from here----------------------------------------- */
 
 #content-section {
   width: 74%;
@@ -1243,3 +1247,4 @@ div#connectDevice-icon {
     }
     
 }
+
