@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,700&display=swap");
 
 /* set default margin and padding  */
 * {
@@ -9,11 +9,11 @@
 
 /* Google Font Poppins */
 body {
-  font-family: 'Poppins', 'sans-serif';
+  font-family: "Poppins", "sans-serif";
   font-weight: 800;
 }
 
-#wrapper{
+#wrapper {
   background-color: #000;
   padding: 1.3rem;
   scroll-behavior: smooth;
@@ -27,22 +27,21 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #444; 
+  box-shadow: inset 0 0 5px #444;
   border-radius: 10px;
-} 
- 
+}
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background:var(--text-color); 
+  background: var(--text-color);
   border-radius: 10px;
-} 
+}
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #444; 
-}  
+  background: #444;
+}
 /* Scroll bar CSS start ---------*/
-
 
 header {
   position: sticky;
@@ -51,8 +50,8 @@ header {
   top: 0;
 }
 
-:root{
-  --text-color:#e51d53;
+:root {
+  --text-color: #e51d53;
 }
 
 /* Nav bar CSS start from here */
@@ -61,13 +60,19 @@ header {
   display: flex;
   background-color: #333;
 }
+.nav-toggle i{
+  display: none;
+}
+.nav-menu-responsive{
+  display: none;
+}
 
 #nav1 {
   height: 5rem;
   position: relative;
   width: 100%;
   display: flex;
-  background-color:#000;
+  background-color: #000;
   justify-content: flex-start;
 }
 
@@ -77,19 +82,23 @@ header {
   display: flex;
   justify-content: center;
 }
+
 /* Website logo CSS */
-.header-logo{
+.header-logo {
   border-radius: 10px;
   margin-right: 10px;
+  height: 5rem;
+  width: 6.25rem;
 }
+
 /* Website Name CSS  */
-.title a{
+.title a {
   text-decoration: none;
 }
 .title h1 {
   margin: 0;
   color: var(--text-color);
-  font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
   font-size: 3rem;
   margin-top: 1rem;
   text-transform: uppercase;
@@ -99,7 +108,7 @@ header {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 1.3rem  var(--text-color);
+    text-shadow: 0 0 1.3rem var(--text-color);
   }
   to {
     text-shadow: 0 0 2.2rem #d72051, 0 0 10px var(--text-color);
@@ -123,6 +132,8 @@ header {
   top: 13px;
   left: 8px;
   position: absolute;
+  width:1rem;
+  height:1rem;
 }
 
 input.search-input {
@@ -134,65 +145,65 @@ input.search-input {
   outline: none;
   padding-left: 1.8rem;
 }
-.microphone{
+.microphone {
   position: absolute;
   color: var(--text-color);
   top: 10%;
   left: 80%;
 }
-#right-nav>div {
+#right-nav > div {
   position: relative;
 }
- /* Button CSS start */
- button{
+/* Button CSS start */
+button {
   border: none;
   outline: none;
   border-radius: 6px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   width: 7rem;
   height: 2rem;
   text-align: center;
- }.subscription .btn{
+}
+.subscription .btn {
   color: #ffffff;
-   background: linear-gradient(-60deg,#14688b, #132450, #FF3D77,#e51d53);
-   background-size: 600%;
-   animation : anime 4s linear infinite;
+  background: linear-gradient(-60deg, #14688b, #132450, #ff3d77, #e51d53);
+  background-size: 600%;
+  animation: anime 4s linear infinite;
 }
-  @keyframes anime{ 
- 0%{
-   background-position: 0% 50%;
- }
- 50%{
-   background-position: 100% 50%;
- }
- 100%{
-   background-position: 0% 50%;
-}
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 button.btn {
   margin-right: 2rem;
 }
-.user{
+.user {
   width: 35%;
   margin-right: 2.8rem;
   display: flex;
   justify-content: flex-end;
 }
-.user .fa-bell{
-margin-right: .6rem;
-font-size: 1.2rem;
-margin-top: .4rem;
-color: #e51d53;
+.user .fa-bell {
+  margin-right: 0.6rem;
+  font-size: 1.2rem;
+  margin-top: 0.4rem;
+  color: #e51d53;
 }
 
-.user img{
- height: 2.5rem;
- width: 2.5rem;
- border-radius: 50%;
-
+.user img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
 }
-.user i{
-  margin-top: .4rem;
+.user i {
+  margin-top: 0.4rem;
   margin-left: 5px;
   color: #fff;
   font-size: 1.3rem;
@@ -210,20 +221,21 @@ li a {
   display: block;
   color: var(--text-color);
   text-align: center;
-  padding: .8rem 1rem;
-  text-underline-offset: .7rem;
+  padding: 0.8rem 1rem;
+  text-underline-offset: 0.7rem;
   text-decoration: none;
 }
-#nav2 .active{
+#nav2 .active {
   background-color: #000;
 }
-
+#nav2{
+  overflow: hidden;
+}
 li a:hover {
   background-color: #111;
   text-decoration: underline;
 }
 /* Header part CSS End here ----------------------------- */
-
 
 /* Main Section start from here----------------------------------------- */
 
@@ -232,11 +244,10 @@ li a:hover {
   height: auto;
   display: inline-block;
   box-shadow: 4px 0px 13px 9px #132450;
-background-color: #0b142d;
-margin-bottom: 4.4rem;
+  background-color: #0b142d;
+  margin-bottom: 4.4rem;
 }
 
- 
 /*  Carousel CSS start from here ----------------------------------------------------------------------- */
 /* Slider CSS */
 #slider {
@@ -260,7 +271,6 @@ margin-bottom: 4.4rem;
   justify-content: space-between;
   align-items: center;
   position: absolute;
-
 }
 
 #left-arrow,
@@ -318,7 +328,8 @@ div.item {
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
   transition: all 0.25s linear;
-  transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
   z-index: calc((var(--position) - var(--abs)));
 }
 
@@ -347,7 +358,7 @@ input:nth-of-type(1) {
   grid-row: 2 / 3;
 }
 
-input:nth-of-type(1):checked~main#carousel {
+input:nth-of-type(1):checked ~ main#carousel {
   --position: 1;
 }
 
@@ -356,7 +367,7 @@ input:nth-of-type(2) {
   grid-row: 2 / 3;
 }
 
-input:nth-of-type(2):checked~main#carousel {
+input:nth-of-type(2):checked ~ main#carousel {
   --position: 2;
 }
 
@@ -365,7 +376,7 @@ input:nth-of-type(3) {
   grid-row: 2 / 3;
 }
 
-input:nth-of-type(3):checked~main#carousel {
+input:nth-of-type(3):checked ~ main#carousel {
   --position: 3;
 }
 
@@ -374,7 +385,7 @@ input:nth-of-type(4) {
   grid-row: 2 / 3;
 }
 
-input:nth-of-type(4):checked~main#carousel {
+input:nth-of-type(4):checked ~ main#carousel {
   --position: 4;
 }
 
@@ -383,18 +394,17 @@ input:nth-of-type(5) {
   grid-row: 2 / 3;
 }
 
-input:nth-of-type(5):checked~main#carousel {
+input:nth-of-type(5):checked ~ main#carousel {
   --position: 5;
 }
- /* Carousel Image CSS */
+/* Carousel Image CSS */
 #carousel img {
   height: 60vh;
   width: 35vw;
 }
 /* Carousel CSS End here --------------------------------------------------------------------- */
 
- 
- /* Songs cards slider section CSS Start from here ----------------------------------------------- */
+/* Songs cards slider section CSS Start from here ----------------------------------------------- */
 .songs-sections {
   margin: 3.75rem 0;
 }
@@ -403,17 +413,18 @@ input:nth-of-type(5):checked~main#carousel {
 section.songs-sections {
   position: relative;
 }
-section.songs-sections #arrow-left, #arrow-right {
- cursor: pointer;
- position: absolute;
+section.songs-sections #arrow-left,
+#arrow-right {
+  cursor: pointer;
+  position: absolute;
   /* display: none; */
   font-size: 2.5rem;
   color: white;
   opacity: 0;
 }
-section.songs-sections:hover #arrow-left{
+section.songs-sections:hover #arrow-left {
   color: #fff;
-  opacity: .5;
+  opacity: 0.5;
   z-index: 2;
   opacity: 1;
   cursor: pointer;
@@ -425,11 +436,10 @@ section.songs-sections:hover #arrow-left{
   width: 40px; */
 }
 
-section.songs-sections #arrow-left:hover{
+section.songs-sections #arrow-left:hover {
   color: var(--text-color);
-
 }
-section.songs-sections:hover #arrow-right{
+section.songs-sections:hover #arrow-right {
   color: #fff;
   opacity: 0.5;
   z-index: 2;
@@ -441,26 +451,25 @@ section.songs-sections:hover #arrow-right{
   /* height: 40px; */
   /* width: 40px; */
 }
-section.songs-sections #arrow-right:hover{
+section.songs-sections #arrow-right:hover {
   color: var(--text-color);
- }
+}
 
 div#arrow-left {
   top: 40%;
 }
 
 div#arrow-right {
-  left: 97%;top: 40%;
+  left: 97%;
+  top: 40%;
 }
 /* Arrow Styling in Song Section end here */
 
-
-
 .section-heading {
   margin-top: 1.3rem;
-  margin-left: 1rem ;
+  margin-left: 1rem;
   font-size: 1rem;
-  font-family:proximanova-semibold-webfont, Arial, sans-serif;
+  font-family: proximanova-semibold-webfont, Arial, sans-serif;
   color: #efeeee;
   display: flex;
   /* background-color: wheat; */
@@ -468,13 +477,13 @@ div#arrow-right {
   justify-content: space-between;
   text-transform: capitalize;
 }
-.section-heading h2:hover{
+.section-heading h2:hover {
   text-decoration: underline var(--text-color);
 }
-.show-all{
+.show-all {
   color: #ffffff;
-  font-size: .8rem;
-  margin: 1.5rem .7rem 0 0;
+  font-size: 0.8rem;
+  margin: 1.5rem 0.7rem 0 0;
 }
 .show-all a {
   color: #fff;
@@ -491,7 +500,7 @@ div#arrow-right {
   padding: 0px 1rem 1rem 1rem;
   flex-direction: row;
   overflow: hidden;
-  margin-top: .8rem;
+  margin-top: 0.8rem;
 }
 
 .song-card {
@@ -499,22 +508,21 @@ div#arrow-right {
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   width: 20%;
-  padding: 0 .8rem;
+  padding: 0 0.8rem;
   flex-direction: column;
   margin-right: 10px;
-  
 }
-.song-card:hover{
+.song-card:hover {
   transform: scale(1.1);
 
-  transition:.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .song-card img:hover {
-    transition: all 0.5s ease-in-out;
-    opacity: 0.6;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.6;
 }
 
 .img-contnt {
@@ -524,30 +532,30 @@ div#arrow-right {
   border-radius: 6px;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-size: contain; 
+  background-size: contain;
 }
-.img-contnt:hover{
-    box-shadow:  1px -1px 5px 5px rgb(17 39 110 / 50%);
+.img-contnt:hover {
+  box-shadow: 1px -1px 5px 5px rgb(17 39 110 / 50%);
 }
 
-.overlay{
-  background-image: linear-gradient(0deg,#0b0d0f,rgba(11,13,15,.35));
+.overlay {
+  background-image: linear-gradient(0deg, #0b0d0f, rgba(11, 13, 15, 0.35));
   opacity: 0;
   height: 100%;
   width: 100%;
 }
-.overlay:hover{
-opacity: 1;
+.overlay:hover {
+  opacity: 1;
 }
-.overlay #play-hover{
+.overlay #play-hover {
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  color:var(--text-color);
+  color: var(--text-color);
   font-size: 2rem;
 }
-.overlay #share-hover{
+.overlay #share-hover {
   position: absolute;
   color: #fff;
   top: 86%;
@@ -555,37 +563,36 @@ opacity: 1;
   font-size: 1rem;
 }
 
-  .overlay #more-hover{
-    position: absolute;
+.overlay #more-hover {
+  position: absolute;
   color: #fff;
-  top:86%;
+  top: 86%;
   left: 86%;
   font-size: 1rem;
-  }
-
-  .song-name {
-    color: #fff;
-    width: 85%;
-     margin-top: 6px;
-    font-family: proximanova-semibold-webfont,Arial,sans-serif;
-    font-size: .8rem;
-    line-height: 2;
-    text-transform: capitalize;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
-.song-name:hover{
- text-decoration: underline;
+
+.song-name {
+  color: #fff;
+  width: 85%;
+  margin-top: 6px;
+  font-family: proximanova-semibold-webfont, Arial, sans-serif;
+  font-size: 0.8rem;
+  line-height: 2;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.song-name:hover {
+  text-decoration: underline;
 }
 /* ----------------------------------------------------------------------------------------- */
-
 
 /* Side playlist queue CSS start from here --------------------------------------------------------*/
 
 /* Scroll bar CSS start ---------*/
 #side-queue::-webkit-scrollbar {
-display: none;
+  display: none;
 }
 
 /* Scroll bar CSS end ---------*/
@@ -599,14 +606,14 @@ display: none;
   overflow: auto;
   color: #fff;
   box-shadow: -2px 2px 14px 10px hsl(223, 60%, 16%);
-  background-color: #070f24;;
+  background-color: #070f24;
 }
 
 .playlist-heading h1 {
   font-size: 1.5rem;
-  margin: .9rem 0 0 1.25rem;
+  margin: 0.9rem 0 0 1.25rem;
   font-weight: 500;
-  font-family: proximanova-bold-webfont,Arial,sans-serif;
+  font-family: proximanova-bold-webfont, Arial, sans-serif;
   text-decoration: solid;
   color: var(--text-color);
 }
@@ -616,16 +623,16 @@ display: none;
 }
 
 #side-queue .play-list h4 {
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 900;
   color: #a9a9ad;
   cursor: pointer;
   display: flex;
   align-items: center;
-  transition:.3s linear;
+  transition: 0.3s linear;
 }
 
-.play-list  .active {
+.play-list .active {
   background-color: #2d3044;
 }
 .play-list .active span {
@@ -646,18 +653,18 @@ display: none;
   width: 100%;
   margin-top: 2.5rem;
 }
-.songItem{
+.songItem {
   display: flex;
 
   height: 2.5rem;
   width: 100%;
 }
-.sidePlay-list{
+.sidePlay-list {
   position: relative;
   width: 70%;
   display: flex;
 }
-.sidePlay-icon{
+.sidePlay-icon {
   width: 30%;
   display: flex;
   justify-content: space-evenly;
@@ -671,17 +678,17 @@ display: none;
   align-items: center;
   margin-bottom: 10px;
   cursor: pointer;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
 .song-list li:hover {
   background-color: #444;
 }
-.song-list li #list-number{
- opacity: 0;
+.song-list li #list-number {
+  opacity: 0;
 }
 .song-list li span {
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #8b8d91;
 }
@@ -694,7 +701,7 @@ display: none;
 
 .song-list li h5 {
   font-size: 11px;
-  margin-left:.9rem;
+  margin-left: 0.9rem;
   width: 10.6rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -706,114 +713,113 @@ display: none;
   color: #98999d;
 }
 
-.song-list li h5 i{
- position: absolute;
- right: 1.5rem; 
+.song-list li h5 i {
+  position: absolute;
+  right: 1.5rem;
 }
 /* Side Queue Song list CSS end */
 /* ----------------------------------------------------------------------------------------- */
 
 /* Side Queue Animation CSS start  */
-aside .master-play{ 
+aside .master-play {
   display: flex;
   align-items: center;
-  }
- .active-play .master-play .wave{
-        opacity: 1;
-  }
-  .sidePlay-icon.active-play i{
-    color: var(--text-color);
-  }
+}
+.active-play .master-play .wave {
+  opacity: 1;
+}
+.sidePlay-icon.active-play i {
+  color: var(--text-color);
+}
 
- /*side playlist  Wave CSS styling start from here */
-  aside .master-play .wave{
-    position: absolute;
-    bottom: 5px;
-    width: 1.87rem;
-    height: 1.87rem;
-    padding-bottom: 5px;
-    display: flex;
-    align-items: flex-end;
-    margin-right: 10px;
-    opacity: 0;
-  }
-  
-  aside .master-play .wave .wave1{
-    width: 4px;
-    height: 10px;
-    background: var(--text-color);
-    margin-right: 3px;
-    border-radius: 10px 10px 0px 0px;
-    animation: wave .3s linear infinite;
-  }
-  aside .master-play .wave .wave1:nth-child(2){
+/*side playlist  Wave CSS styling start from here */
+aside .master-play .wave {
+  position: absolute;
+  bottom: 5px;
+  width: 1.87rem;
+  height: 1.87rem;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: flex-end;
+  margin-right: 10px;
+  opacity: 0;
+}
+
+aside .master-play .wave .wave1 {
+  width: 4px;
+  height: 10px;
+  background: var(--text-color);
+  margin-right: 3px;
+  border-radius: 10px 10px 0px 0px;
+  animation: wave 0.3s linear infinite;
+}
+aside .master-play .wave .wave1:nth-child(2) {
+  height: 7px;
+  margin-right: 3.5;
+  animation-delay: 0.4s;
+}
+
+aside .master-play .wave .wave1:nth-child(3) {
+  height: 8px;
+  animation-delay: 0.8s;
+}
+
+@keyframes wave {
+  0% {
     height: 7px;
-    margin-right: 3.5;
-    animation-delay: .4s;
   }
-  
-  aside .master-play .wave .wave1:nth-child(3){
-    height: 8px;
-    animation-delay: .8s;
+  50% {
+    height: 15px;
   }
+  100% {
+    height: 5px;
+  }
+}
 
-  @keyframes wave{
-    0%{
-        height: 7px;
-    }
-    50%{
-        height: 15px;
-    }
-    100%{
-        height: 5px;
-    }
-  }
-  
- /* side playlist Waves Animation end  here */
+/* side playlist Waves Animation end  here */
 
- /* side playlist Wave CSS styling end here */
+/* side playlist Wave CSS styling end here */
 /* --------------------------------------------------------------------------------------------- */
 
-
 /* Media control CSS start from here --------------------------------------------------------------------*/
-.footer #audio-icon img{
+.footer #audio-icon img {
   width: 1.25rem;
   height: 1.25rem;
   margin-top: 6px;
   filter: brightness(0) invert(1);
 }
-.footer #connectDevice-icon img{
+.footer #connectDevice-icon img {
   width: 1.25rem;
   height: 1.25rem;
   margin-top: 6px;
   filter: brightness(0) invert(1);
 }
-  #media-controls{
+#media-controls {
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   bottom: 0;
-  width: 100%;   
+  width: 100%;
   background-color: #333;
   height: 5rem;
 }
 
-.slider-up i{
+.slider-up i {
   color: #fff;
 }
-.maximize i{
+.maximize i {
   color: #fff;
 }
-.footer .master-play{
-display: flex  ;
-width: 100%;
-justify-content: space-between;
-align-items: center;
-padding: 0 1.25rem;  
+.footer .master-play {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;
 }
 
-.footer .master-play .wave{
+.footer .master-play .wave {
   width: 1.87rem;
   height: 1.87rem;
   padding-bottom: 5px;
@@ -822,53 +828,53 @@ padding: 0 1.25rem;
   margin-right: 10px;
 }
 
-.footer .master-play .wave .wave1{
+.footer .master-play .wave .wave1 {
   width: 4px;
   height: 10px;
   background: var(--text-color);
   margin-right: 3px;
   border-radius: 10px 10px 0px 0px;
-  animation: wave .3s linear infinite;
+  animation: wave 0.3s linear infinite;
 }
-.footer .master-play .wave .wave1:nth-child(2){
+.footer .master-play .wave .wave1:nth-child(2) {
   height: 7px;
   margin-right: 3.5;
-  animation-delay: .4s;
+  animation-delay: 0.4s;
 }
 
-.footer .master-play .wave .wave1:nth-child(3){
+.footer .master-play .wave .wave1:nth-child(3) {
   height: 8px;
-  animation-delay: .8s;
+  animation-delay: 0.8s;
 }
 
-@keyframes wave{
-  0%{
-      height: 10px;
+@keyframes wave {
+  0% {
+    height: 10px;
   }
-  50%{
-      height: 15px;
+  50% {
+    height: 15px;
   }
-  100%{
-      height: 10px;
+  100% {
+    height: 10px;
   }
 }
 
-.footer .master-play img{
+.footer .master-play img {
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 6px;
 }
-.footer .master-play h5{
+.footer .master-play h5 {
   width: 8.12rem;
   margin-left: 10px;
-  color:#ffff;
+  color: #ffff;
   line-height: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 13px;
 }
-.footer .master-play h5 .subtitle{
+.footer .master-play h5 .subtitle {
   font-size: 11px;
   color: rgb(200, 202, 192);
   overflow: hidden;
@@ -876,9 +882,9 @@ padding: 0 1.25rem;
   white-space: nowrap;
 }
 
-.footer .master-play .masterplay-icon{
+.footer .master-play .masterplay-icon {
   font-size: 1rem;
-  color:#fff;
+  color: #fff;
   margin: 0 1.25rem 0 2.5rem;
   outline: none;
   display: flex;
@@ -890,76 +896,74 @@ padding: 0 1.25rem;
   font-size: 1rem;
 }
 
-.footer .master-play .masterplay-icon .fa-solid{
+.footer .master-play .masterplay-icon .fa-solid {
   cursor: pointer;
   outline: none;
 }
 
-
-.footer .master-play .masterplay-icon .fa-circle-pause{
- margin: 0px 5px;
- color: var(--text-color);
- font-size: 2rem;
- 
+.footer .master-play .masterplay-icon .fa-circle-pause {
+  margin: 0px 5px;
+  color: var(--text-color);
+  font-size: 2rem;
 }
-  .footer .master-play span{
-    color:#fff;
-    width: 2rem;
-    font-size: .8rem;
-    font-weight: 400;
-  }
+.footer .master-play span {
+  color: #fff;
+  width: 2rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
 
-.footer .master-play #current-start{
+.footer .master-play #current-start {
   margin: 0 0 0 1.87rem;
 }
-.footer .master-play .seek-bar{
+.footer .master-play .seek-bar {
   position: relative;
-  width:43%;
+  width: 43%;
   height: 2px;
   border-radius: 2px;
-  background:#c9c9d2c4;
-  margin: 0 .9rem 0 .6rem;
+  background: #c9c9d2c4;
+  margin: 0 0.9rem 0 0.6rem;
 }
-.footer .master-play .seek-bar .seek-bar2{
+.footer .master-play .seek-bar .seek-bar2 {
   position: absolute;
   background: var(--text-color);
   width: 70%;
-  border-radius:2px ;
+  border-radius: 2px;
   height: 100%;
   top: 0px;
   transition: 1s linear;
 }
-.footer .master-play .seek-bar .dot{
-position: absolute;
-width: 5px;
-height: 5px;
-background: var(--text-color);
-border-radius: 50%;
-left: 70%;
-top: -1.5px;  
-transition: 1s linear;
+.footer .master-play .seek-bar .dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: var(--text-color);
+  border-radius: 50%;
+  left: 70%;
+  top: -1.5px;
+  transition: 1s linear;
 }
-.footer .master-play .seek-bar .dot::before{
-  content: '';
+.footer .master-play .seek-bar .dot::before {
+  content: "";
   position: absolute;
   width: 1rem;
   height: 1rem;
   border: 1px solid var(--text-color);
   border-radius: 50%;
   top: -6px;
-  left:-7px;
+  left: -7px;
   box-shadow: inset 0px 0px 3px var(--text-color);
 }
-.footer .master-play .seek-bar input{
-  position:absolute;
+.footer .master-play .seek-bar input {
+  position: absolute;
   width: 100%;
-  top:-7px;
+  top: -7px;
   left: 0;
   cursor: pointer;
   z-index: 2;
   opacity: 0;
 }
-.footer .master-play .vol{
+.footer .master-play .vol {
   position: relative;
   width: 6.25rem;
   height: 2px;
@@ -968,14 +972,14 @@ transition: 1s linear;
   margin-left: 3.12rem;
 }
 
-.footer .master-play .vol .fa-solid{
+.footer .master-play .vol .fa-solid {
   position: absolute;
   color: #fff;
   font-size: 1.25rem;
-  top:-10px;
+  top: -10px;
   left: -1.87rem;
 }
-.footer .master-play .vol input{
+.footer .master-play .vol input {
   position: absolute;
   width: 100%;
   top: -10px;
@@ -984,66 +988,66 @@ transition: 1s linear;
   z-index: 3;
   opacity: 0;
 }
-.footer .master-play .vol .vol-bar{
+.footer .master-play .vol .vol-bar {
   position: absolute;
   background: var(--text-color);
   width: 40%;
   border-radius: 2px;
   height: 100%;
-  top:0px;
+  top: 0px;
   transition: 1s linear;
 }
 
-.footer .master-play .vol .dot{
+.footer .master-play .vol .dot {
   position: absolute;
-width: 5px;
-height: 5px;
-transform: rotate(-90deg);
-background:var(--text-color);
-border-radius: 50%;
-left: 40%;
-top: -1.5px;  
-transition: 1s linear;  
+  width: 5px;
+  height: 5px;
+  transform: rotate(-90deg);
+  background: var(--text-color);
+  border-radius: 50%;
+  left: 40%;
+  top: -1.5px;
+  transition: 1s linear;
 }
 
-.footer .master-play .vol .dot::before{
-  content: '';
+.footer .master-play .vol .dot::before {
+  content: "";
   position: absolute;
-  width: .9rem;
-  height: .9rem;
+  width: 0.9rem;
+  height: 0.9rem;
   border: 1px solid var(--text-color);
   border-radius: 50%;
   top: -6px;
-  left:-6px;
+  left: -6px;
   box-shadow: inset 0px 0px 3px var(--text-color);
 }
-.song-play{
+.song-play {
   width: 10%;
-  display:flex;
+  display: flex;
   align-items: center;
 }
-.footer .audio-control1{
-  width: 100%; 
+.footer .audio-control1 {
+  width: 100%;
   display: flex;
   margin-right: -10%;
-   flex-direction: column;
-    align-items: center;
-}
-.footer .audio-icon{
-  display: flex; 
-  width: 100%; 
+  flex-direction: column;
   align-items: center;
-   justify-content: center;
+}
+.footer .audio-icon {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-.audio-control2{
-  width: 30%; 
+.audio-control2 {
+  width: 30%;
   display: flex;
-   justify-content: space-around;
-    align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
-.audio-control2 img{
-  margin-left:10px;
+.audio-control2 img {
+  margin-left: 10px;
 }
 div#connectDevice-icon {
   margin-left: 10px;
@@ -1052,199 +1056,63 @@ div#connectDevice-icon {
   margin-left: 20%;
 }
 
-
 /* Media control styling end here */
 
-/* Media Query Start for size 768px and 1024px---------------- */
+/* Media Query Start for size 950px---------------- */
 
-@media screen and (max-width:768px) {
- 
-    body {
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 10px;
+  }
+   body {
       font-family: 'Poppins', 'sans-serif';
-      font-weight: 800;
-    }
-    
-    #wrapper{
-      background-color: #000;
-      padding: 1.3rem;
-      scroll-behavior: smooth;
-    }
-    
-    /* Scroll bar CSS start ---------*/
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 1.3rem;
-    }
-    
-    /* Track */
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px #444; 
-      border-radius: 10px;
-    } 
-     
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background:var(--text-color); 
-      border-radius: 10px;
+      font-weight: 400;
     } 
     
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #444; 
-    }  
-    /* Scroll bar CSS start ---------*/
-    
-    
-    header {
-      position: sticky;
-      width: 100%;
-      z-index: 2;
-      top: 0;
-    }
-    
-    :root{
-      --text-color:#e51d53;
-    }
-    
-    /* Nav bar CSS start from here */
-    #nav1,
-    #nav2 {
-      display: flex;
-      background-color: #333;
-    }
-    
-    #nav1 {
-      height: 5rem;
-      position: relative;
-      width: 100%;
-      display: flex;
-      background-color:#000;
-      justify-content: flex-start;
-    }
-    
-    #left-nav {
-      width: 30%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    /* Website logo CSS */
-    .header-logo{
-      border-radius: 15px;
-      margin-right: .7rem;
-    }
-    .header-logo{
-      width:60px;
-      height:60px;
-   }
-    /* Website Name CSS  */
-    .title a{
-      text-decoration: none;
-    }
-    .title h1 {
-      margin: 0;
-      color: var(--text-color);
-      font-family: 'Teko', sans-serif;
-      font-size: 2rem;
-      margin-top: 1rem;
-      text-transform: uppercase;
-      animation: glow 1.4s ease-in-out infinite alternate;
-      text-align: center;
-    }
-    
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 1.3rem  var(--text-color);
-      }
-      to {
-        text-shadow: 0 0 2.2rem #d72051, 0 0 10px var(--text-color);
-      }
-    }
-    
-    #right-nav {
-      display: flex;
-      justify-content: flex-start;
-      padding-left: 6.25rem;
-      width: 70%;
-      height: 100%;
-      padding-top: 1.25rem;
-    }
-    /* Search bar CSS start from here */
-    #search-bar {
-      width: 60%;
-    }
-    
-    .search-icon {
-      top: 13px;
-      left: 8px;
-      position: absolute;
-    }
-    
-    input.search-input {
-      width: 85%;
-      height: 2.5rem;
-      background-color: #444;
-      border-radius: 1.25rem;
-      border: none;
-      outline: none;
-      padding-left: 1.8rem;
-    }
-    .microphone{
-      position: absolute;
-      color: var(--text-color);
-      top: 10%;
-      left: 80%;
-    }
-    #right-nav>div {
-      position: relative;
-    }
-    .user{
-      width: 35%;
-      margin-right: 2.8rem;
-      display: flex;
-      justify-content: flex-end;
-    
-    }
-    .user img{
-     height: 2.5rem;
-     width: 2.5rem;
-     border-radius: 50%;
-    
-    }
-    .user i{
-      margin-top: 10px;
-      margin-left: 5px;
-      color: #fff;
-    }
-    
-    ul.nav-menu li {
-      list-style: none;
-    }
-    
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color: var(--text-color);
-      text-align: center;
-      padding: .8rem 1rem;
-      text-underline-offset: 1.25rem;
-      text-decoration: none;
-    }
-      
-    li a:hover {
-      background-color: #111;
-      text-decoration: underline;
-    }
-    
-    #content-section {
- 
-    box-shadow: 4px 0px 13px 9px #132450;
-   
-    
-    }
-    
+  #side-queue {
+    height: auto;
+  }
+  .search-icon {
+    top: 8px;
+    left: 4px;
+  }
+  .microphone{
+    top:14%;
+  }  
 }
 
+
+@media screen and (max-width: 550px) {
+  html{
+    font-size: 7px;
+  }
+  #content-section{
+    width: 100%;
+    box-shadow: none;
+   }
+   #nav2 .nav-menu{
+    display: none;
+   }
+   #nav2{
+    background-color: #000;
+    display: flex;
+    justify-content: flex-end;
+   }
+   .nav-toggle i{
+    margin-right:1rem ;
+    font-size:32px;
+    display:block;
+    color:#ffffff;    
+   }
+   .nav-toggle:targe{
+    display: inline-block;
+   }
+   .song-card{
+     width: 33%;
+   }
+
+  #side-queue {
+    height: auto;
+    display: none;
+  }
+}

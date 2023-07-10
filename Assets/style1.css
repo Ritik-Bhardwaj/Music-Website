@@ -421,7 +421,7 @@ align-items: center;
    
 }
 .album-name{
-    width: 50%;
+    width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
