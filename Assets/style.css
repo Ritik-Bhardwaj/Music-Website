@@ -1301,22 +1301,26 @@ img.header-logo {
   }
   #slider{
     margin-top: 6.2rem;
+    
   }
+
   .item {
     width: 100% !important;
-    height: 100% !important;
+    /* height: 100% !important; */
   }
 
   .item img {
     width: 100% !important;
-  }
+    /* height: 100% !important; */
 
+  }
+ 
   #media-controls{
     height: 8rem;
   }
 
   .song-play {
-    width: 35%;
+    width: 50% !important;
   }
 
   .wave {
@@ -1333,10 +1337,14 @@ img.header-logo {
     font-size: 1.2rem;
     font-weight: 900;
   }
-
+  .footer .master-play h5{
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+  }
 
   .audio-control1 {
     height: 62px;
+    width: 80% !important;
   }
 
   .audio-icon {
@@ -1348,6 +1356,9 @@ img.header-logo {
     margin: 0px 4px;
     color: white;
     font-size: 700;
+  }
+  .audio-control2{
+    display: none;
   }
 
 }
@@ -1393,6 +1404,24 @@ main#carousel{
 
 .item img {
   width: 100% !important;
+  height: 100% !important;
+
+}
+
+.song-play{
+  width: 25%;
+}
+.footer .audio-control1{
+  width: 50%;
+}
+.audio-control2{
+  width: 25%;
+}
+.slider-up{
+  margin: 0;
+}
+.footer .master-play .vol .fa-solid{
+  top: -5px;
 }
 
 }
