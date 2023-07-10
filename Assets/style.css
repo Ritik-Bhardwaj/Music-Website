@@ -866,7 +866,7 @@ aside .master-play .wave .wave1:nth-child(3) {
 }
 .footer .master-play h5 {
   width: 8.12rem;
-  margin-left: 10px;
+  margin-left: 8px;
   color: #ffff;
   line-height: 1rem;
   overflow: hidden;
@@ -913,56 +913,194 @@ aside .master-play .wave .wave1:nth-child(3) {
   font-weight: 400;
 }
 
-.footer .master-play #current-start {
-  margin: 0 0 0 1.87rem;
+
+ /* Seek bar CSS start------------------------------ */
+/* === range theme and appearance === */
+.seek-bar input[type="range"] {
+	font-size: 1.5rem;
+	width: 16em;
 }
-.footer .master-play .seek-bar {
-  position: relative;
-  width: 43%;
-  height: 2px;
-  border-radius: 2px;
-  background: #c9c9d2c4;
-  margin: 0 0.9rem 0 0.6rem;
+
+.seek-bar input[type="range"] {
+	color: #ef233c;
+	--thumb-height: .8rem;
+	--track-height: 2px;
+	--track-color: rgba(0, 0, 0, 0.2);
+	--brightness-hover: 180%;
+	--brightness-down: 80%;
+	--clip-edges: 0.125em;
 }
-.footer .master-play .seek-bar .seek-bar2 {
-  position: absolute;
-  background: var(--text-color);
-  width: 70%;
-  border-radius: 2px;
-  height: 100%;
-  top: 0px;
-  transition: 1s linear;
+
+.seek-bar input[type="range"].win10-thumb {
+	color: #2b2d42;
+
+	--thumb-height: 1.375em;
+	--thumb-width: 0.5em;
+	--clip-edges: 0.0125em;
 }
-.footer .master-play .seek-bar .dot {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background: var(--text-color);
-  border-radius: 50%;
-  left: 70%;
-  top: -1.5px;
-  transition: 1s linear;
+
+@media (prefers-color-scheme: dark) {
+	html {
+		background-color: #000;
+	}
+
+	html::before {
+		background: radial-gradient(circle at center, #101112, #000);
+	}
+
+	.seek-bar input[type="range"] {
+		color:var(--text-color);
+		--track-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.seek-bar input[type="range"].win10-thumb {
+		color: #3a86ff;
+	}
 }
-.footer .master-play .seek-bar .dot::before {
-  content: "";
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  border: 1px solid var(--text-color);
-  border-radius: 50%;
-  top: -6px;
-  left: -7px;
-  box-shadow: inset 0px 0px 3px var(--text-color);
+                                                                                                                                        
+/* === range commons === */
+.seek-bar input[type="range"] {
+	position: relative;
+	background: #fff0;
+	overflow: hidden;
 }
-.footer .master-play .seek-bar input {
-  position: absolute;
-  width: 100%;
-  top: -7px;
-  left: 0;
-  cursor: pointer;
-  z-index: 2;
-  opacity: 0;
+
+.seek-bar input[type="range"]:active {
+	cursor: grabbing;
 }
+
+.seek-bar input[type="range"]:disabled {
+	filter: grayscale(1);
+	opacity: 0.3;
+	cursor: not-allowed;
+}
+
+/* === WebKit specific styles === */
+.seek-bar input[type="range"],
+.seek-bar input[type="range"]::-webkit-slider-runnable-track,
+.seek-bar input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	transition: all ease 100ms;
+	height: var(--thumb-height);
+}
+
+.seek-bar input[type="range"]::-webkit-slider-runnable-track,
+.seek-bar input[type="range"]::-webkit-slider-thumb {
+	position: relative;
+}
+
+.seek-bar input[type="range"]::-webkit-slider-thumb {
+	--thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
+	--clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
+	--clip-bottom: calc(var(--thumb-height) - var(--clip-top));
+	--clip-further: calc(100% + 1px);
+	--box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
+		100vmax currentColor;
+
+	width: var(--thumb-width, var(--thumb-height));
+	background: linear-gradient(currentColor 0 0) scroll no-repeat left center /
+		50% calc(var(--track-height) + 1px);
+	background-color: currentColor;
+	box-shadow: var(--box-fill);
+	border-radius: var(--thumb-width, var(--thumb-height));
+
+	filter: brightness(100%);
+	clip-path: polygon(
+		100% -1px,
+		var(--clip-edges) -1px,
+		0 var(--clip-top),
+		-100vmax var(--clip-top),
+		-100vmax var(--clip-bottom),
+		0 var(--clip-bottom),
+		var(--clip-edges) 100%,
+		var(--clip-further) var(--clip-further)
+	);
+}
+
+.seek-bar input[type="range"]:hover::-webkit-slider-thumb {
+	filter: brightness(var(--brightness-hover));
+	cursor: grab;
+}
+
+.seek-bar input[type="range"]:active::-webkit-slider-thumb {
+	filter: brightness(var(--brightness-down));
+	cursor: grabbing;
+}
+
+.seek-bar input[type="range"]::-webkit-slider-runnable-track {
+	background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center /
+		100% calc(var(--track-height) + 1px);
+}
+
+.seek-bar input[type="range"]:disabled::-webkit-slider-thumb {
+	cursor: not-allowed;
+}
+
+/* === Firefox specific styles === */
+.seek-bar input[type="range"],
+.seek-bar input[type="range"]::-moz-range-track,
+.seek-bar input[type="range"]::-moz-range-thumb {
+	appearance: none;
+	transition: all ease 100ms;
+	height: var(--thumb-height);
+}
+
+.seek-bar input[type="range"]::-moz-range-track,
+.seek-bar input[type="range"]::-moz-range-thumb,
+.seek-bar input[type="range"]::-moz-range-progress {
+	background: #fff0;
+}
+
+.seek-bar input[type="range"]::-moz-range-thumb {
+	background: currentColor;
+	border: 0;
+	width: var(--thumb-width, var(--thumb-height));
+	border-radius: var(--thumb-width, var(--thumb-height));
+	cursor: grab;
+}
+
+.seek-bar input[type="range"]:active::-moz-range-thumb {
+	cursor: grabbing;
+}
+
+.seek-bar input[type="range"]::-moz-range-track {
+	width: 100%;
+	background: var(--track-color);
+}
+
+.seek-bar input[type="range"]::-moz-range-progress {
+	appearance: none;
+	background: currentColor;
+	transition-delay: 30ms;
+}
+
+.seek-bar input[type="range"]::-moz-range-track,
+.seek-bar input[type="range"]::-moz-range-progress {
+	height: calc(var(--track-height) + 1px);
+	border-radius: var(--track-height);
+}
+
+.seek-bar input[type="range"]::-moz-range-thumb,
+.seek-bar input[type="range"]::-moz-range-progress {
+	filter: brightness(100%);
+}
+
+.seek-bar input[type="range"]:hover::-moz-range-thumb,
+.seek-bar input[type="range"]:hover::-moz-range-progress {
+	filter: brightness(var(--brightness-hover));
+}
+
+.seek-bar input[type="range"]:active::-moz-range-thumb,
+.seek-bar input[type="range"]:active::-moz-range-progress {
+	filter: brightness(var(--brightness-down));
+}
+
+.seek-bar input[type="range"]:disabled::-moz-range-thumb {
+	cursor: not-allowed;
+}
+
+ /* Seek bar CSS start------------------------------ */
+
 .footer .master-play .vol {
   position: relative;
   width: 6.25rem;
@@ -1058,17 +1196,173 @@ div#connectDevice-icon {
 
 /* Media control styling end here */
 
+/* Media Query Start for size 550px---------------- */
+@media screen and (max-width: 550px) {
+  body {
+    font-family: "Poppins", "sans-serif";
+    font-weight: 800;
+  }
+  
+  html{
+    font-size: 7px;
+  }
+   div#left-nav {
+    align-items: center;
+   }
+img.header-logo {
+    width: 3.4rem !important;
+    height: 3.4rem !important;
+    margin-left: .3rem;
+    margin-right: 5px;
+}
+  .title h1{
+    font-size: 1.2rem !important;
+    margin-top: -2px;
+    
+}
+   #search-bar input.search-input{
+    width: 75%;
+    height: 2.3rem;
+    border-radius: 1.3rem;
+    margin-top: -5px;
+   }
+   .search-icon {
+    top: 3px !important;
+}
+   input::placeholder {
+    font-size: .8rem;
+  }
+  .microphone {
+    left: 65%;
+    top: 5% !important;
+    left: 66% !important;
+}
+   .subscription button{
+    width:5rem;
+    height: 1.5rem;
+    font-size: .5rem;
+   }
+   button.btn{
+    margin: 0;
+   }
+   .user{
+    margin: 0;
+   }
+   div#right-nav {
+    align-items: center;
+    justify-content: center;
+}
+#right-nav{
+  padding-left: 1.25rem;
+  padding-top: 0;
+ }
+   #nav2 .nav-menu{
+    display: none;
+   }
+   #nav2{
+    background-color: #333;
+    display: flex;
+    justify-content: flex-end;
+   }
+   .nav-toggle i{
+    margin-right:1rem ;
+    font-size:32px;
+    display:block;
+    color:var(--text-color);    
+   }
+   .nav-toggle:targe{
+    display: inline-block;
+   }
+   
+   #nav-toggle-anchor {
+    text-decoration: none;
+}
+.nav-menu-responsive li{
+  list-style: none;
+}
+.nav-menu-responsive li a{
+  color: var(--text-color);
+  font-size: 2rem;
+}
+#content-section{
+  width: 100%;
+  box-shadow: none;
+ }
+   .song-card{
+     width: 33%;
+   }
+
+  #side-queue {
+    height: auto;
+    display: none;
+  }
+  #arrow {
+    display: none;
+  }
+  #slider{
+    margin-top: 6.2rem;
+  }
+  .item {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .item img {
+    width: 100% !important;
+  }
+
+  #media-controls{
+    height: 8rem;
+  }
+
+  .song-play {
+    width: 35%;
+  }
+
+  .wave {
+    display: none !important;
+  }
+
+  .footer .master-play img {
+
+    height:5rem;
+    width: 5rem;
+  }
+  
+  .song-title div{
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+
+  .audio-control1 {
+    height: 62px;
+  }
+
+  .audio-icon {
+    flex-grow: 1;
+    display: flex !important;
+  }
+
+  .audio-icon div {
+    margin: 0px 4px;
+    color: white;
+    font-size: 700;
+  }
+
+}
+
 /* Media Query Start for size 950px---------------- */
 
 @media screen and (max-width: 950px) {
   html {
     font-size: 10px;
   }
-   body {
-      font-family: 'Poppins', 'sans-serif';
-      font-weight: 400;
-    } 
-    
+  body {
+    font-family: "Poppins", "sans-serif";
+    font-weight: 800;
+  }
+  
   #side-queue {
     height: auto;
   }
@@ -1079,40 +1373,26 @@ div#connectDevice-icon {
   .microphone{
     top:14%;
   }  
+  #left-nav .title h1{
+    font-size: 3rem;
+}
+#arrow {
+  display: none;
+}
+#slider{
+margin-top: 6.2rem;
 }
 
+main#carousel{
+  width: 70vw!important;
+}
+.item {
+  width: 100% !important;
+  height: 100% !important;
+}
 
-@media screen and (max-width: 550px) {
-  html{
-    font-size: 7px;
-  }
-  #content-section{
-    width: 100%;
-    box-shadow: none;
-   }
-   #nav2 .nav-menu{
-    display: none;
-   }
-   #nav2{
-    background-color: #000;
-    display: flex;
-    justify-content: flex-end;
-   }
-   .nav-toggle i{
-    margin-right:1rem ;
-    font-size:32px;
-    display:block;
-    color:#ffffff;    
-   }
-   .nav-toggle:targe{
-    display: inline-block;
-   }
-   .song-card{
-     width: 33%;
-   }
+.item img {
+  width: 100% !important;
+}
 
-  #side-queue {
-    height: auto;
-    display: none;
-  }
 }
