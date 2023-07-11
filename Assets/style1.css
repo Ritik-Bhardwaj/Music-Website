@@ -359,7 +359,7 @@ button{
 #playlist ul:hover{
      color: var(--text-color);
      background-color: #413f3f;
-     transition: all 0.8s linear 0s;
+     transition: all 0.4s linear 0s;
      /* color:#fff; */
 }
 
@@ -429,7 +429,7 @@ align-items: center;
 .heart{
     width: 25%;
     float: right;
-       
+    opacity: 0;  
 }
 .heart:hover{
     -webkit-animation: nextarrow 1s infinite;
@@ -447,14 +447,42 @@ align-items: center;
         transform: scale(1, 1);
     }
 }
-    
-
 
 .menu{
   width: 25%;
   float: right;
+  opacity: 0;
 }
-
+#playlist ul:hover .heart{
+  opacity: 1;
+}
+#playlist ul:hover .menu{
+  opacity: 1;
+}
+.track-image{
+  position: relative;
+}
+.play-hover{
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  text-align: center;
+  opacity: 0;
+  background-color: rgba(0,0,0,.8);
+  cursor: pointer;
+}
+.play-hover i{
+  position: absolute;
+  top: 24%;
+  left: 30%;
+}
+#playlist ul:hover .play-hover{
+  opacity: 1;
+}
 /* Media control CSS start from here --------------------------------------------------------------------*/
 .footer #audio-icon img{
     width: 1.25rem;

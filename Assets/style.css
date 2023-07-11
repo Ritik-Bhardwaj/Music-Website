@@ -510,6 +510,7 @@ div#arrow-right {
   align-items: center;
   justify-content: space-evenly;
   width: 20%;
+  margin-top: 1rem;
   padding: 0 0.8rem;
   flex-direction: column;
   margin-right: 10px;
@@ -586,6 +587,13 @@ div#arrow-right {
 .song-name:hover {
   text-decoration: underline;
 }
+
+/* Artist section CSS start  */
+div#artis-image .img-contnt {
+  border-radius: 50%;
+}
+/* Artist section CSS end  */
+
 /* ----------------------------------------------------------------------------------------- */
 
 /* Side playlist queue CSS start from here --------------------------------------------------------*/
