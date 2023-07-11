@@ -196,8 +196,33 @@ button.btn {
   font-size: 1.2rem;
   margin-top: 0.4rem;
   color: #e51d53;
+  animation-name: bell-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
-
+@keyframes bell-animation{
+  0% {
+    transform: rotate(0deg);
+}
+50% {
+    transform: rotateY(360deg);
+}
+0% {
+    transform: scale(1.2);
+}
+25% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.2);
+}
+75% {
+    transform: scale(1);
+}
+100% {
+    transform: scale(1.2);
+}
+}
 .user img {
   height: 2.5rem;
   width: 2.5rem;
@@ -247,7 +272,7 @@ button.btn {
 }
 
 #check{
-/* display: none; */
+display: none;
 }
 /* Header part CSS End here ----------------------------- */
 
@@ -790,7 +815,30 @@ aside .master-play .wave .wave1:nth-child(3) {
 }
 
 /* side playlist Waves Animation end  here */
-
+label[for="more"] {
+  display: none;
+  position: absolute;
+  right: 0%;
+  top: 45%;
+  padding-bottom: 5px;
+  z-index: 4;
+  color: var(--text-color);
+  font-size: 1.6rem;
+  height: 2.5rem;
+  width: 7rem;
+  text-align: center;
+  box-shadow: 0px 0px 2px 1px white;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 36%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+input[type="checkbox"] {
+  display: none;
+}
 /* side playlist Wave CSS styling end here */
 /* --------------------------------------------------------------------------------------------- */
 
@@ -1049,77 +1097,12 @@ aside .master-play .wave .wave1:nth-child(3) {
 	cursor: not-allowed;
 }
 
-/* === Firefox specific styles === */
-.seek-bar input[type="range"],
-.seek-bar input[type="range"]::-moz-range-track,
-.seek-bar input[type="range"]::-moz-range-thumb {
-	appearance: none;
-	transition: all ease 100ms;
-	height: var(--thumb-height);
-}
-
-.seek-bar input[type="range"]::-moz-range-track,
-.seek-bar input[type="range"]::-moz-range-thumb,
-.seek-bar input[type="range"]::-moz-range-progress {
-	background: #fff0;
-}
-
-.seek-bar input[type="range"]::-moz-range-thumb {
-	background: currentColor;
-	border: 0;
-	width: var(--thumb-width, var(--thumb-height));
-	border-radius: var(--thumb-width, var(--thumb-height));
-	cursor: grab;
-}
-
-.seek-bar input[type="range"]:active::-moz-range-thumb {
-	cursor: grabbing;
-}
-
-.seek-bar input[type="range"]::-moz-range-track {
-	width: 100%;
-	background: var(--track-color);
-}
-
-.seek-bar input[type="range"]::-moz-range-progress {
-	appearance: none;
-	background: currentColor;
-	transition-delay: 30ms;
-}
-
-.seek-bar input[type="range"]::-moz-range-track,
-.seek-bar input[type="range"]::-moz-range-progress {
-	height: calc(var(--track-height) + 1px);
-	border-radius: var(--track-height);
-}
-
-.seek-bar input[type="range"]::-moz-range-thumb,
-.seek-bar input[type="range"]::-moz-range-progress {
-	filter: brightness(100%);
-}
-
-.seek-bar input[type="range"]:hover::-moz-range-thumb,
-.seek-bar input[type="range"]:hover::-moz-range-progress {
-	filter: brightness(var(--brightness-hover));
-}
-
-.seek-bar input[type="range"]:active::-moz-range-thumb,
-.seek-bar input[type="range"]:active::-moz-range-progress {
-	filter: brightness(var(--brightness-down));
-}
-
-.seek-bar input[type="range"]:disabled::-moz-range-thumb {
-	cursor: not-allowed;
-}
-
- /* Seek bar CSS start------------------------------ */
+ /* Seek bar CSS end------------------------------ */
 
 .footer .master-play .vol {
   position: relative;
   width: 6.25rem;
-  height: 2px;
   border-radius: 2px;
-  background: #c9c9d2c4;
   margin-left: 3.12rem;
 }
 
@@ -1132,46 +1115,9 @@ aside .master-play .wave .wave1:nth-child(3) {
 }
 .footer .master-play .vol input {
   position: absolute;
-  width: 100%;
-  top: -10px;
-  left: 0;
   cursor: pointer;
-  z-index: 3;
-  opacity: 0;
-}
-.footer .master-play .vol .vol-bar {
-  position: absolute;
-  background: var(--text-color);
-  width: 40%;
-  border-radius: 2px;
-  height: 100%;
-  top: 0px;
-  transition: 1s linear;
 }
 
-.footer .master-play .vol .dot {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  transform: rotate(-90deg);
-  background: var(--text-color);
-  border-radius: 50%;
-  left: 40%;
-  top: -1.5px;
-  transition: 1s linear;
-}
-
-.footer .master-play .vol .dot::before {
-  content: "";
-  position: absolute;
-  width: 0.9rem;
-  height: 0.9rem;
-  border: 1px solid var(--text-color);
-  border-radius: 50%;
-  top: -6px;
-  left: -6px;
-  box-shadow: inset 0px 0px 3px var(--text-color);
-}
 .song-play {
   width: 10%;
   display: flex;
@@ -1207,7 +1153,63 @@ div#connectDevice-icon {
   margin-left: 20%;
 }
 
-/* Media control styling end here */
+.vol input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  background-color: red;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.vol input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: red;
+  cursor: pointer;
+}
+
+.song-play{
+  width: 10%;
+  display:flex;
+  align-items: center;
+}
+.footer .audio-control1{
+  width: 100%; 
+  display: flex;
+  margin-right: -10%;
+   flex-direction: column;
+    align-items: center;
+}
+.footer .audio-icon{
+  display: flex; 
+  width: 100%; 
+  align-items: center;
+   justify-content: center;
+}
+
+.audio-control2{
+  width: 30%; 
+  display: flex;
+   justify-content: space-around;
+    align-items: center;
+}
+.audio-control2 img{
+  margin-left:10px;
+}
+div#connectDevice-icon {
+  margin-left: 10px;
+}
+.slider-up {
+  margin-left: 20%;
+}
+
+ /* Media control styling end here */
 
 /* Media Query Start for size 550px---------------- */
 @media screen and (max-width: 550px) {
@@ -1281,11 +1283,11 @@ img.header-logo {
     height: 25rem;
     background-color: #000;
     text-align: center;
-    top: 8rem;
-    left: -50%; 
+    top: 7.9rem;
+    left: -100%; 
     transition: all .5s;
    }
-   #check:checked + .check-btn ~ #nav-menu{
+   #check:checked ~ #nav-menu{
     left: 0;
    }
    #nav2 #nav-menu li{
@@ -1300,34 +1302,7 @@ img.header-logo {
  .check-btn i{
   margin-top: .6rem;
 }
-   /* #nav2 #nav-menu{
-    display: none;
-   }
-   #nav2{
-    background-color: #333;
-    display: flex;
-    justify-content: flex-end;
-   } */
-   /* .nav-toggle i{
-    margin-right:1rem ;
-    font-size:32px;
-    display:block;
-    color:var(--text-color);    
-   }
-   .nav-toggle:targe{
-    display: inline-block;
-   } */
-   
-   /* #nav-toggle-anchor {
-    text-decoration: none;
-}
-#nav-menu-responsive li{
-  list-style: none;
-}
-#nav-menu-responsive li a{
-  color: var(--text-color);
-  font-size: 2rem;
-} */
+
 #content-section{
   width: 100%;
   box-shadow: none;
@@ -1350,15 +1325,21 @@ img.header-logo {
 
   .item {
     width: 100% !important;
-    /* height: 100% !important; */
+    height: 100% !important;
   }
 
   .item img {
     width: 100% !important;
-    /* height: 100% !important; */
-
   }
- 
+
+  /* side queue responsive CSS start------------------*/
+  label[for="more"] {
+    display: block;
+}
+#more:checked ~ #side-queue {
+  display: block;
+}
+
   #media-controls{
     height: 8rem;
   }
@@ -1469,5 +1450,31 @@ main#carousel{
 .footer .master-play .vol .fa-solid{
   top: -5px;
 }
+.vol {
+  display: inline-block;
+  width: 30px;
+  position: fixed;
+  /* margin-bottom: 6rem;  */
+}
 
+.vol input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  background-color: red;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.vol input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  cursor: pointer;
+}
 }

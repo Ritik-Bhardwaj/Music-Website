@@ -21,23 +21,25 @@
     <!-- Nav menu section start from here -->
     <nav id="nav1">
       <div id="left-nav">
-        <a href="index.html"><img class="header-logo" src="./Assets/img/logo.jpg" alt="Image not loaded"/></a>
+        <a href="index.html"><img class="header-logo" src="./Assets/img/logo.jpg" alt="Image not loaded" /></a>
 
         <div class="title">
-         <a href="index.html"><h1><span>musically</span>
-          </h1></a>
+          <a href="index.html">
+            <h1><span>musically</span>
+            </h1>
+          </a>
         </div>
 
       </div>
       <div id="right-nav">
         <div id="search-bar">
-          <img class="search-icon"  src="https://img.icons8.com/search" alt="search--v1" />
+          <img class="search-icon" src="https://img.icons8.com/search" alt="search--v1" />
           <input class="search-input" placeholder="Search Artists, Songs, Albums" type="search" name="" id="" />
           <div class="microphone">
             <i class="fa-solid fa-microphone"></i>
           </div>
         </div>
-         
+
 
         <div class="user">
           <div class="subscription">
@@ -51,7 +53,12 @@
     </nav>
 
     <nav id="nav2">
-        <ul id="nav-menu">
+      <input type="checkbox" id="check">
+      <label for="check" class="check-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+
+      <ul id="nav-menu">
         <li><a class="active" href="#all">All </a></li>
         <li><a href="#trending-songs">Trending Songs</a></li>
         <li><a href="#new-songs">New Songs</a></li>
@@ -60,13 +67,9 @@
         <li><a href="#album">Album</a></li>
         <li><a href="#radio">Radio</a></li>
         <li><a href="#podcast">Podcast</a></li>
-        </ul>
+      </ul>
 
-        
-        <input type="checkbox" id="check">
-      <label for="check" class="check-btn">
-        <i class="fas fa-bars"></i>
-      </label>
+
     </nav>
     <!-- Nav menu section end here -->
 
@@ -119,8 +122,8 @@
                   <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
                 </div>
               </div>
-                  <p class="song-name">Meri Zindgi hai tu Meri Zindgi hai tu</p>
-             </div>
+              <p class="song-name">Meri Zindgi hai tu Meri Zindgi hai tu</p>
+            </div>
 
             <div class="song-card">
               <div class="img-contnt" style="background-image: url(Assets/img/4.jpg);">
@@ -321,12 +324,12 @@
 
             <div class="song-card">
               <div id="artist-image">
-              <div class="img-contnt" style="background-image: url(Assets/img/arjit.jpg);">
-                <div class="overlay">
-                  <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                <div class="img-contnt" style="background-image: url(Assets/img/arjit.jpg);">
+                  <div class="overlay">
+                    <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  </div>
                 </div>
               </div>
-            </div>
               <p class="song-name">Arijit Singh</p>
             </div>
 
@@ -359,7 +362,7 @@
                     <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
                   </div>
                 </div>
-                </div>
+              </div>
               <p class="song-name">Rahat Fateh Ali khan</p>
             </div>
 
@@ -401,12 +404,12 @@
 
             <div class="song-card">
               <div id="artist-image">
-              <div class="img-contnt" style="background-image: url(Assets/img/arjit.jpg);">
-                <div class="overlay">
-                  <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                <div class="img-contnt" style="background-image: url(Assets/img/arjit.jpg);">
+                  <div class="overlay">
+                    <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  </div>
                 </div>
               </div>
-            </div>
               <p class="song-name">Arijit Singh</p>
             </div>
 
@@ -439,7 +442,7 @@
                     <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
                   </div>
                 </div>
-                </div>
+              </div>
               <p class="song-name">Rahat Fateh Ali khan</p>
             </div>
 
@@ -631,23 +634,28 @@
         <!-- English songs section End here -->
 
         <!-- Mood Generes Section Start from here  party, electronic, road-trip, bhakti, romance, ghzals-->
-       <div id="mood-generes">
-       
-      </div>
+        <div id="mood-generes">
+
+        </div>
       </section>
-
-
       <!-- Conternt Section closed here -------------->
 
-
+         <!-- Side Queue Songs list section end -->
+        <!-- one aside section is complete -->
+        <!-- now the second aside section will start from here -->
+        <!-- the page is responsive. please try reducing the width of the page -->
+        <!-- the aside section will collapse and a "more button will be shown to you." -->
+        <label for="more"><i class="fas fa-angle-double-left"></i>More</label>
+        <input type="checkbox" id="more">
       <!-- Side Queue code start from here -->
       <aside id="side-queue">
         <div class="playlist-heading">
           <h1>Queue</h1>
         </div>
+        
         <!-- Playlist code start -->
         <div class="play-list">
-          
+
           <h4 class="active">
             <span><i class="fa fa-music" aria-hidden="true"></i>playlist</span>
           </h4>
@@ -678,7 +686,7 @@
               <i class="fa fa-play-circle" aria-hidden="true" id="1"></i>
             </div>
           </li>
-        
+
           <li class="songItem">
             <div class="sidePlay-list">
               <span>2</span>
@@ -951,9 +959,11 @@
               <i class="fa  fa-play-circle" aria-hidden="true" id="1"></i>
             </div>
           </li>
-          
-          <!-- Side Queue Songs list section end -->
+
+        </div>
       </aside>
+
+
     </div>
   </main>
 
@@ -962,32 +972,32 @@
   <section class="footer">
     <div id="media-controls">
       <div class="master-play">
-       <div class="song-play">
-        <div class="wave">
-          <div class="wave1"></div>
-          <div class="wave1"></div>
-          <div class="wave1"></div>
-        </div>
-        <img src="Assets/img/9.jpg" alt="" id="thumbnail-masterPlay">
-        <h5 id="song-title">
-          Dilbar Dilbar
-          <div class="subtitle">
-            Artist name
+        <div class="song-play">
+          <div class="wave">
+            <div class="wave1"></div>
+            <div class="wave1"></div>
+            <div class="wave1"></div>
           </div>
-        </h5>
-      </div>
+          <img src="Assets/img/9.jpg" alt="" id="thumbnail-masterPlay">
+          <h5 id="song-title">
+            Dilbar Dilbar
+            <div class="subtitle">
+              Artist name
+            </div>
+          </h5>
+        </div>
 
-        <div class="audio-control1"> 
-          <div class="masterplay-icon">            
+        <div class="audio-control1">
+          <div class="masterplay-icon">
             <i class="fa-solid fa-shuffle" title="Enable shuffle"></i>
             <i class="fa-solid fa-backward-step" title="Previous"></i>
             <i class="fa-solid fa-circle-pause" title="Pause"></i>
             <i class="fa-solid fa-forward-step" title="Next"></i>
             <i class="fa-solid fa-repeat" title="Enable Repeat"></i>
-            <i class="fa-solid fa-cloud-arrow-down" title="Download"></i>      
+            <i class="fa-solid fa-cloud-arrow-down" title="Download"></i>
           </div>
 
-          <div class="audio-icon"> 
+          <div class="audio-icon">
             <span id="current-start">2:00</span>
             <div class="seek-bar">
               <input type="range" min="0" max="100" value="40" step="5" />
@@ -997,27 +1007,27 @@
         </div>
 
         <div class="audio-control2">
-        <div class="slider-up">
-          <i class="fa-solid fa-sliders" title="Equalizer"></i>
-        </div>
-        <div id="connectDevice-icon"> 
-         <img src="https://cdn-icons-png.flaticon.com/512/8736/8736763.png"  alt="" title="Connect Device">
-        </div>
-        <div class="vol">
+          <div class="slider-up">
+            <i class="fa-solid fa-sliders" title="Equalizer"></i>
+          </div>
+          <div id="connectDevice-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/8736/8736763.png" alt="" title="Connect Device">
+          </div>
+          <div class="vol">
             <i class="fa-solid fa-volume-low" id="vol-icon" title="Volume"></i>
-          <input type="range" id="seek" min="0" max="100" id="vol">
-          <div class="vol-bar"> </div>
-          <div class="dot" id="vol-dot"></div>
-        </div>
-        <div id="audio-icon"> 
-         <img src="https://cdn-icons-png.flaticon.com/512/4211/4211451.png"  alt="" title="Queue"> 
-        </div>
-        <div class="maximize">
-          <i class="fa-sharp fa-solid fa-up-right-and-down-left-from-center" title="Maximize"></i>
-        </div>
+            <input type="range" min="0" max="100" id="volum">
+            <div class="vol-bar"> </div>
+            <div class="dot" id="vol-dot"></div>
+          </div>
+          <div id="audio-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/4211/4211451.png" alt="" title="Queue">
+          </div>
+          <div class="maximize">
+            <i class="fa-sharp fa-solid fa-up-right-and-down-left-from-center" title="Maximize"></i>
+          </div>
         </div>
       </div>
-    </div>
   </section>
 </body>
+
 </html>
