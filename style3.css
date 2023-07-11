@@ -40,6 +40,11 @@
 .track-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+ul.row.heading .sr-no {
+  visibility: hidden;
 }
 
 .track-image {

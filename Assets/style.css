@@ -57,15 +57,16 @@ header {
 /* Nav bar CSS start from here */
 #nav1,
 #nav2 {
-  display: flex;
+  /* display: flex; */
   background-color: #333;
 }
-.nav-toggle i{
+
+/* .nav-toggle i{
   display: none;
 }
-.nav-menu-responsive{
-  display: none;
-}
+#nav-menu-responsive{
+  display: none;  
+} */
 
 #nav1 {
   height: 5rem;
@@ -208,17 +209,17 @@ button.btn {
   color: #fff;
   font-size: 1.3rem;
 }
+#nav2{
+  overflow: hidden;
+  height: 3rem;
+}
 
-ul.nav-menu li {
+#nav2 #nav-menu li{
+  display: inline-block;
   list-style: none;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
+  line-height: 3rem;
+} 
+#nav2 #nav-menu li a {
   color: var(--text-color);
   text-align: center;
   padding: 0.8rem 1rem;
@@ -228,12 +229,25 @@ li a {
 #nav2 .active {
   background-color: #000;
 }
-#nav2{
-  overflow: hidden;
-}
-li a:hover {
+
+#nav-menu li a:hover {
   background-color: #111;
-  text-decoration: underline;
+  transition: .6s;
+  text-decoration: underline !important;
+}
+
+.check-btn{
+  float: right;
+  color: var(--text-color);
+  line-height: 100%;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+/* display: none; */
 }
 /* Header part CSS End here ----------------------------- */
 
@@ -417,7 +431,6 @@ section.songs-sections #arrow-left,
 #arrow-right {
   cursor: pointer;
   position: absolute;
-  /* display: none; */
   font-size: 2.5rem;
   color: white;
   opacity: 0;
@@ -429,11 +442,6 @@ section.songs-sections:hover #arrow-left {
   opacity: 1;
   cursor: pointer;
   font-size: 2.5rem;
-
-  /* border-radius: 50%; 
-  box-shadow: 3px 5px 12px 27px rgb(182 49 49 / 95%); 
-  height: 40px; 
-  width: 40px; */
 }
 
 section.songs-sections #arrow-left:hover {
@@ -445,11 +453,8 @@ section.songs-sections:hover #arrow-right {
   z-index: 2;
   opacity: 1;
   cursor: pointer;
-  /* border-radius: 50%; */
-  /* box-shadow: 3px 5px 12px 27px rgb(182 49 49 / 95%); */
   font-size: 2.5rem;
-  /* height: 40px; */
-  /* width: 40px; */
+ 
 }
 section.songs-sections #arrow-right:hover {
   color: var(--text-color);
@@ -589,7 +594,7 @@ div#arrow-right {
 }
 
 /* Artist section CSS start  */
-div#artis-image .img-contnt {
+div#artist-image .img-contnt {
   border-radius: 50%;
 }
 /* Artist section CSS end  */
@@ -1264,15 +1269,46 @@ img.header-logo {
   padding-left: 1.25rem;
   padding-top: 0;
  }
-   #nav2 .nav-menu{
+
+ #nav2{
+  display:block;
+  height: 3rem;
+   }
+   #nav2 #nav-menu{
+    display: block;
+    position:fixed;
+    width: 100%;
+    height: 25rem;
+    background-color: #000;
+    text-align: center;
+    top: 8rem;
+    left: -50%; 
+    transition: all .5s;
+   }
+   #check:checked + .check-btn ~ #nav-menu{
+    left: 0;
+   }
+   #nav2 #nav-menu li{
+    display: block;
+   }
+   #nav2 #nav-menu li{
+    text-transform: uppercase;
+   }
+   .check-btn{
+    display: block;
+   }
+ .check-btn i{
+  margin-top: .6rem;
+}
+   /* #nav2 #nav-menu{
     display: none;
    }
    #nav2{
     background-color: #333;
     display: flex;
     justify-content: flex-end;
-   }
-   .nav-toggle i{
+   } */
+   /* .nav-toggle i{
     margin-right:1rem ;
     font-size:32px;
     display:block;
@@ -1280,18 +1316,18 @@ img.header-logo {
    }
    .nav-toggle:targe{
     display: inline-block;
-   }
+   } */
    
-   #nav-toggle-anchor {
+   /* #nav-toggle-anchor {
     text-decoration: none;
 }
-.nav-menu-responsive li{
+#nav-menu-responsive li{
   list-style: none;
 }
-.nav-menu-responsive li a{
+#nav-menu-responsive li a{
   color: var(--text-color);
   font-size: 2rem;
-}
+} */
 #content-section{
   width: 100%;
   box-shadow: none;
@@ -1381,7 +1417,9 @@ img.header-logo {
     font-family: "Poppins", "sans-serif";
     font-weight: 800;
   }
-  
+  #nav2{
+    height: 3rem;
+  }
   #side-queue {
     height: auto;
   }

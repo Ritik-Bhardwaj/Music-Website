@@ -51,8 +51,7 @@
     </nav>
 
     <nav id="nav2">
-      
-      <ul id="dropdown" class="nav-menu-responsive">
+        <ul id="nav-menu">
         <li><a class="active" href="#all">All </a></li>
         <li><a href="#trending-songs">Trending Songs</a></li>
         <li><a href="#new-songs">New Songs</a></li>
@@ -62,22 +61,12 @@
         <li><a href="#radio">Radio</a></li>
         <li><a href="#podcast">Podcast</a></li>
         </ul>
-      <a href="#dropdown" id="nav-toggle-anchor">
-      <div class="nav-toggle">
-        <i class="fas fa-bars"></i>
-       </div>
-      </a>
 
-      <ul class="nav-menu">
-        <li><a class="active" href="#all">All </a></li>
-        <li><a href="#trending-songs">Trending Songs</a></li>
-        <li><a href="#new-songs">New Songs</a></li>
-        <li><a href="#old-songs">Old Songs</a></li>
-        <li><a href="#moods-genres">Moods Genres</a></li>
-        <li><a href="#album">Album</a></li>
-        <li><a href="#radio">Radio</a></li>
-        <li><a href="#podcast">Podcast</a></li>
-        </ul>
+        
+        <input type="checkbox" id="check">
+      <label for="check" class="check-btn">
+        <i class="fas fa-bars"></i>
+      </label>
     </nav>
     <!-- Nav menu section end here -->
 
@@ -239,6 +228,87 @@
         </section>
         <!-- Trending Songs Cards section end here ---->
 
+        <!-- Top Charts Section Start from here  -->
+        <section class="songs-sections">
+          <div id="arrow-left"><i class="fa-solid fa-circle-left" title="Previous"></i></div>
+          <div id="arrow-right"><i class="fa-solid fa-circle-right " title="Next"></i></div>
+          <div class="section-heading">
+            <h2>Top Charts</h2>
+            <h4 class="show-all"><a href="#">Show All</a></h4>
+          </div>
+          <div class="songs-contnt">
+
+            <div class="song-card">
+              <div class="img-contnt" style="background-image: url(Assets/img/1.jpg);">
+                <div class="overlay">
+                  <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  <i class="fa-solid fa-share" id="share-hover"></i>
+                  <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                </div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu Meri Zindgi hai tu</p>
+            </div>
+
+            <div class="song-card">
+              <div class="img-contnt" style="background-image: url(Assets/img/7.jpg);">
+                <div class="overlay">
+                  <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  <i class="fa-solid fa-share" id="share-hover"></i>
+                  <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                </div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu</p>
+            </div>
+
+            <div class="song-card">
+              <div class="img-contnt" style="background-image: url(Assets/img/4.jpg);">
+                <div class="overlay">
+                  <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  <i class="fa-solid fa-share" id="share-hover"></i>
+                  <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                </div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu</p>
+            </div>
+
+            <div class="song-card">
+              <div class="img-contnt" style="background-image: url(Assets/img/6.jpg);">
+                <div class="overlay">
+                  <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  <i class="fa-solid fa-share" id="share-hover"></i>
+                  <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                </div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu</p>
+            </div>
+
+            <div class="song-card">
+              <div class="img-contnt" style="background-image: url(Assets/img/11.jpg);">
+                <div class="overlay">
+                  <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  <i class="fa-solid fa-share" id="share-hover"></i>
+                  <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                </div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu</p>
+            </div>
+
+            <div class="song-card">
+              <div class="img-contnt" style="background-image: url(Assets/img/3.jpg);">
+                <div class="overlay">
+                  <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  <i class="fa-solid fa-share" id="share-hover"></i>
+                  <i class="fa-solid fa-ellipsis-vertical" id="more-hover"></i>
+                </div>
+              </div>
+              <p class="song-name">Meri Zindgi hai tu</p>
+            </div>
+
+          </div>
+        </section>
+        <!-- Top Charts Section End from here  -->
+
+
         <!-- Featured Artist section Start from here -->
         <section class="songs-sections">
           <div id="arrow-left"><i class="fa-solid fa-circle-left" title="Previous"></i></div>
@@ -250,7 +320,7 @@
           <div class="songs-contnt">
 
             <div class="song-card">
-              <div id="artis-image">
+              <div id="artist-image">
               <div class="img-contnt" style="background-image: url(Assets/img/arjit.jpg);">
                 <div class="overlay">
                   <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
@@ -261,7 +331,7 @@
             </div>
 
             <div class="song-card">
-              <div id="artis-image">
+              <div id="artist-image">
                 <div class="img-contnt" style="background-image: url(Assets/img/Diljit_Dosanjh.jpg);">
                   <div class="overlay">
                     <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
@@ -272,7 +342,7 @@
             </div>
 
             <div class="song-card">
-              <div id="artis-image">
+              <div id="artist-image">
                 <div class="img-contnt" style="background-image: url(Assets/img/akhil.jpg);">
                   <div class="overlay">
                     <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
@@ -283,17 +353,18 @@
             </div>
 
             <div class="song-card">
-              <div id="artis-image">
+              <div id="artist-image">
                 <div class="img-contnt" style="background-image: url(Assets/img/17.jpg);">
                   <div class="overlay">
                     <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
                   </div>
                 </div>
+                </div>
               <p class="song-name">Rahat Fateh Ali khan</p>
             </div>
 
             <div class="song-card">
-              <div id="artis-image">
+              <div id="artist-image">
                 <div class="img-contnt" style="background-image: url(Assets/img/neha.jpg);">
                   <div class="overlay">
                     <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
@@ -304,7 +375,7 @@
             </div>
 
             <div class="song-card">
-              <div id="artis-image">
+              <div id="artist-image">
                 <div class="img-contnt" style="background-image: url(Assets/img/alan.jpg);">
                   <div class="overlay">
                     <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
@@ -317,6 +388,87 @@
           </div>
         </section>
         <!-- Featured Artist section closed here -->
+
+        <!-- Radio Section start from here -->
+        <section class="songs-sections">
+          <div id="arrow-left"><i class="fa-solid fa-circle-left" title="Previous"></i></div>
+          <div id="arrow-right"><i class="fa-solid fa-circle-right " title="Next"></i></div>
+          <div class="section-heading">
+            <h2>Radio</h2>
+            <h4 class="show-all"><a href="#">Show All</a></h4>
+          </div>
+          <div class="songs-contnt">
+
+            <div class="song-card">
+              <div id="artist-image">
+              <div class="img-contnt" style="background-image: url(Assets/img/arjit.jpg);">
+                <div class="overlay">
+                  <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                </div>
+              </div>
+            </div>
+              <p class="song-name">Arijit Singh</p>
+            </div>
+
+            <div class="song-card">
+              <div id="artist-image">
+                <div class="img-contnt" style="background-image: url(Assets/img/Diljit_Dosanjh.jpg);">
+                  <div class="overlay">
+                    <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="song-name">Diljit Dosanjh</p>
+            </div>
+
+            <div class="song-card">
+              <div id="artist-image">
+                <div class="img-contnt" style="background-image: url(Assets/img/akhil.jpg);">
+                  <div class="overlay">
+                    <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="song-name">Akhil</p>
+            </div>
+
+            <div class="song-card">
+              <div id="artist-image">
+                <div class="img-contnt" style="background-image: url(Assets/img/17.jpg);">
+                  <div class="overlay">
+                    <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  </div>
+                </div>
+                </div>
+              <p class="song-name">Rahat Fateh Ali khan</p>
+            </div>
+
+            <div class="song-card">
+              <div id="artist-image">
+                <div class="img-contnt" style="background-image: url(Assets/img/neha.jpg);">
+                  <div class="overlay">
+                    <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="song-name">Neha Kakkar</p>
+            </div>
+
+            <div class="song-card">
+              <div id="artist-image">
+                <div class="img-contnt" style="background-image: url(Assets/img/alan.jpg);">
+                  <div class="overlay">
+                    <i class="fa-solid fa-play" id="play-hover" title="Play"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="song-name">Alen Walker</p>
+            </div>
+
+          </div>
+        </section>
+        <!-- Radio Section End from here -->
+
 
         <!-- Hindi songs section Start form here -->
         <section class="songs-sections">
@@ -477,7 +629,14 @@
           </div>
         </section>
         <!-- English songs section End here -->
+
+        <!-- Mood Generes Section Start from here  party, electronic, road-trip, bhakti, romance, ghzals-->
+       <div id="mood-generes">
+       
+      </div>
       </section>
+
+
       <!-- Conternt Section closed here -------------->
 
 
@@ -488,12 +647,13 @@
         </div>
         <!-- Playlist code start -->
         <div class="play-list">
+          
           <h4 class="active">
             <span><i class="fa fa-music" aria-hidden="true"></i>playlist</span>
           </h4>
 
           <h4>
-            <span><i class="fa fa-music" aria-hidden="true"> </i>Recent
+            <span><i class="fa fa-music" aria-hidden="true"> </i>Recently
               Played</span>
           </h4>
 
@@ -509,7 +669,7 @@
             <div class="sidePlay-list">
               <span>1</span>
               <img src="Assets/img/1.jpg" alt="">
-              <h5>On My WayAlan WalkeAlan Walker <br>
+              <h5>On My way <br>
                 <div class="subtitle">Alan Walker </div>
               </h5>
             </div>
@@ -524,7 +684,7 @@
               <span>2</span>
               <img src="Assets/img/2.jpg" alt="">
               <h5>On My Way <br>
-                <div class="subtitle">Alan Walker</div>
+                <div class="subtitle">Artist Name</div>
               </h5>
             </div>
             <div class="sidePlay-icon">
@@ -544,7 +704,7 @@
               </div>
               <span id="list-number">3</span>
               <img src="Assets/img/9.jpg" alt="">
-              <h5>On My Way <br>
+              <h5>Dilbar Dilbar <br>
                 <div class="subtitle">Alan Walker</div>
               </h5>
             </div>
@@ -708,6 +868,90 @@
               <i class="fa  fa-play-circle" aria-hidden="true" id="1"></i>
             </div>
           </li>
+          <li class="songItem">
+            <div class="sidePlay-list">
+              <span>15</span>
+              <img src="Assets/img/1.jpg" alt="">
+              <h5>On My Way <br>
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+            </div>
+            <div class="sidePlay-icon">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa  fa-play-circle" aria-hidden="true" id="1"></i>
+            </div>
+          </li>
+
+          <li class="songItem">
+            <div class="sidePlay-list">
+              <span>16</span>
+              <img src="Assets/img/14.jpg" alt="">
+              <h5>On My Way <br>
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+            </div>
+            <div class="sidePlay-icon">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa  fa-play-circle" aria-hidden="true" id="1"></i>
+            </div>
+          </li>
+
+          <li class="songItem">
+            <div class="sidePlay-list">
+              <span>17</span>
+              <img src="Assets/img/16.jpg" alt="">
+              <h5>On My Way <br>
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+            </div>
+            <div class="sidePlay-icon">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa  fa-play-circle" aria-hidden="true" id="1"></i>
+            </div>
+          </li>
+
+          <li class="songItem">
+            <div class="sidePlay-list">
+              <span>18</span>
+              <img src="Assets/img/11.jpg" alt="">
+              <h5>On My Way <br>
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+            </div>
+            <div class="sidePlay-icon">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa  fa-play-circle" aria-hidden="true" id="1"></i>
+            </div>
+          </li>
+
+          <li class="songItem">
+            <div class="sidePlay-list">
+              <span>19</span>
+              <img src="Assets/img/12.jpg" alt="">
+              <h5>On My Way <br>
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+            </div>
+            <div class="sidePlay-icon">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa  fa-play-circle" aria-hidden="true" id="1"></i>
+            </div>
+          </li>
+
+          <li class="songItem">
+            <div class="sidePlay-list">
+              <span>20</span>
+              <img src="Assets/img/12.jpg" alt="">
+              <h5>On My Way <br>
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+            </div>
+            <div class="sidePlay-icon">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa  fa-play-circle" aria-hidden="true" id="1"></i>
+            </div>
+          </li>
+          
           <!-- Side Queue Songs list section end -->
       </aside>
     </div>

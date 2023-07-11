@@ -214,10 +214,7 @@ margin-bottom: 4.4rem;
     height: 100%;
     width: 100%;
 }
-.bg-image:hover {
-    transform: scale(1.1);
-    transition: .5s ease-in-out;
-}
+
 .info-sec .bg-image{
   
     border-radius: 50%;
@@ -316,7 +313,7 @@ margin-bottom: 4.4rem;
 color: #fff;
 background: linear-gradient(-45deg,#e72c30, #132450, #FF3D77,#e51d53);
 background-size: 600%;
-animation : anime 8s linear infinite;
+animation : anime 3s linear infinite;
 }
 
 .btn-solid{
