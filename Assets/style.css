@@ -61,13 +61,6 @@ header {
   background-color: #333;
 }
 
-/* .nav-toggle i{
-  display: none;
-}
-#nav-menu-responsive{
-  display: none;  
-} */
-
 #nav1 {
   height: 5rem;
   position: relative;
@@ -622,6 +615,10 @@ div#arrow-right {
 div#artist-image .img-contnt {
   border-radius: 50%;
 }
+.artist-name .song-name {
+  text-align: center;
+  width: 7rem; 
+}
 /* Artist section CSS end  */
 
 /* ----------------------------------------------------------------------------------------- */
@@ -813,32 +810,7 @@ aside .master-play .wave .wave1:nth-child(3) {
     height: 5px;
   }
 }
-
 /* side playlist Waves Animation end  here */
-label[for="more"] {
-  display: none;
-  position: absolute;
-  right: 0%;
-  top: 45%;
-  padding-bottom: 5px;
-  z-index: 4;
-  color: var(--text-color);
-  font-size: 1.6rem;
-  height: 2.5rem;
-  width: 7rem;
-  text-align: center;
-  box-shadow: 0px 0px 2px 1px white;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 36%,
-    rgba(0, 212, 255, 1) 100%
-  );
-}
-input[type="checkbox"] {
-  display: none;
-}
 /* side playlist Wave CSS styling end here */
 /* --------------------------------------------------------------------------------------------- */
 
@@ -983,7 +955,7 @@ input[type="checkbox"] {
 }
 
 .seek-bar input[type="range"] {
-	color: #ef233c;
+	color: var(--text-color);
 	--thumb-height: .8rem;
 	--track-height: 2px;
 	--track-color: rgba(0, 0, 0, 0.2);
@@ -1157,7 +1129,7 @@ div#connectDevice-icon {
   -webkit-appearance: none;
   width: 100%;
   height: 3px;
-  background-color: red;
+  background-color: var(--text-color);
   outline: none;
   opacity: 0.7;
   -webkit-transition: opacity 0.2s;
@@ -1170,7 +1142,7 @@ div#connectDevice-icon {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background-color: red;
+  background-color: var(--text-color);
   cursor: pointer;
 }
 
@@ -1210,6 +1182,99 @@ div#connectDevice-icon {
 }
 
  /* Media control styling end here */
+
+
+/* Media Query Start for size 950px---------------- */
+
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 10px;
+  }
+  body {
+    font-family: "Poppins", "sans-serif";
+    font-weight: 800;
+  }
+  #nav2{
+    height: 3rem;
+  }
+  #side-queue {
+    height: auto;
+  }
+  .search-icon {
+    top: 8px;
+    left: 4px;
+  }
+  .microphone{
+    top:14%;
+  }  
+  #left-nav .title h1{
+    font-size: 3rem;
+}
+#arrow {
+  display: none;
+}
+#slider{
+margin-top: 6.2rem;
+}
+
+main#carousel{
+  width: 70vw!important;
+}
+.item {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.item img {
+  width: 100% !important;
+  height: 100% !important;
+
+}
+
+.song-play{
+  width: 25%;
+}
+.footer .audio-control1{
+  width: 50%;
+}
+.audio-control2{
+  width: 25%;
+}
+.slider-up{
+  margin: 0;
+}
+.footer .master-play .vol .fa-solid{
+  top: -5px;
+}
+.vol {
+  display: inline-block;
+  width: 30px;
+  position: fixed;
+  /* margin-bottom: 6rem;  */
+}
+
+.vol input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  background-color:var(--text-color);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.vol input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color:var(--text-color);
+  cursor: pointer;
+}
+}
+
 
 /* Media Query Start for size 550px---------------- */
 @media screen and (max-width: 550px) {
@@ -1332,14 +1397,6 @@ img.header-logo {
     width: 100% !important;
   }
 
-  /* side queue responsive CSS start------------------*/
-  label[for="more"] {
-    display: block;
-}
-#more:checked ~ #side-queue {
-  display: block;
-}
-
   #media-controls{
     height: 8rem;
   }
@@ -1371,7 +1428,9 @@ img.header-logo {
     height: 62px;
     width: 80% !important;
   }
-
+  .footer .master-play .masterplay-icon{
+    margin: 0;
+  }
   .audio-icon {
     flex-grow: 1;
     display: flex !important;
@@ -1387,94 +1446,4 @@ img.header-logo {
   }
 
 }
-
-/* Media Query Start for size 950px---------------- */
-
-@media screen and (max-width: 950px) {
-  html {
-    font-size: 10px;
-  }
-  body {
-    font-family: "Poppins", "sans-serif";
-    font-weight: 800;
-  }
-  #nav2{
-    height: 3rem;
-  }
-  #side-queue {
-    height: auto;
-  }
-  .search-icon {
-    top: 8px;
-    left: 4px;
-  }
-  .microphone{
-    top:14%;
-  }  
-  #left-nav .title h1{
-    font-size: 3rem;
-}
-#arrow {
-  display: none;
-}
-#slider{
-margin-top: 6.2rem;
-}
-
-main#carousel{
-  width: 70vw!important;
-}
-.item {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.item img {
-  width: 100% !important;
-  height: 100% !important;
-
-}
-
-.song-play{
-  width: 25%;
-}
-.footer .audio-control1{
-  width: 50%;
-}
-.audio-control2{
-  width: 25%;
-}
-.slider-up{
-  margin: 0;
-}
-.footer .master-play .vol .fa-solid{
-  top: -5px;
-}
-.vol {
-  display: inline-block;
-  width: 30px;
-  position: fixed;
-  /* margin-bottom: 6rem;  */
-}
-
-.vol input[type="range"] {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 3px;
-  background-color: red;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-}
-
-.vol input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: red;
-  cursor: pointer;
-}
-}
+/* Media Query end for size 550px---------------- */
