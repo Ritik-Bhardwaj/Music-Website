@@ -577,6 +577,10 @@ aside .master-play {
   color: var(--text-color);
 }
 
+.favorite{
+  color: var(--text-color);
+}
+
 /*side playlist  Wave CSS styling start from here */
 aside .master-play .wave {
   position: absolute;
@@ -950,6 +954,7 @@ div#arrow-right {
 /* Artist section CSS start  */
 div#artist-image .img-contnt {
   border-radius: 50%;
+  background-size: cover;
 }
 .artist-name .song-name {
   text-align: center;
@@ -1532,7 +1537,7 @@ img.header-logo {
 
 .info-sec .btn, .bttn {
   height: 2rem;
-  font-size: 12px;
+  font-size: 9px;
   font-family:Arial,sans-serif; 
   text-transform: capitalize;
 }
@@ -1542,6 +1547,9 @@ img.header-logo {
 
   #playlist{
     width: 90vw;
+  }
+  .track-name{
+    margin-left: 1rem;
   }
   #side-queue {
     height: auto;

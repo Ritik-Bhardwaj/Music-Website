@@ -556,7 +556,7 @@ div#arrow-right {
   border-radius: 6px;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .img-contnt:hover {
   box-shadow: 1px -1px 5px 5px rgb(17 39 110 / 50%);
@@ -614,12 +614,45 @@ div#arrow-right {
 /* Artist section CSS start  */
 div#artist-image .img-contnt {
   border-radius: 50%;
+  background-size: cover;
 }
 .artist-name .song-name {
   text-align: center;
   width: 7rem; 
 }
 /* Artist section CSS end  */
+
+/* Radio Section start from here----------- */
+#radio-image .img-contnt{
+  border-radius:50%;
+}
+.radio-name .song-name {
+  text-align: center;
+  width: 7rem; 
+}
+/* Radio Section end from here----------- */
+
+
+/* Mood Genere Section CSS start-------------------- */
+#genere-image .img-contnt{
+  position: relative;
+}
+
+.overlay-genere{
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.701);
+  height: 35%;
+  bottom: 0;
+}
+.overlay-genere .genere-name{
+  color:#fff;
+  margin-top: .4rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+ 
+/* Mood Genere Section CSS end-------------------- */
 
 /* ----------------------------------------------------------------------------------------- */
 
